@@ -2,6 +2,6 @@
 
 ## Table of Contents
 
-- [Main Page](./)
+- [About me](./about-me)
 - [Writing Samples](./samples)
 - [Archived Blog](./blog-archived)
