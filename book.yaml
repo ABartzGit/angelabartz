@@ -1,0 +1,1 @@
+root: .\noutput: ./_book\ntitle: "My Book Title"\nauthor: "Author Name"\nplugins:\n  - search\n  - split\n  - tabs
