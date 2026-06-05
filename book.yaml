@@ -1,1 +1,0 @@
-root: .\noutput: ./_book\ntitle: "Angela Bartz"\nauthor: "Angela Bartz"\nplugins:\n  - search\n  - split\n  - tabs

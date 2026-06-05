@@ -1,3 +1,3 @@
 # Main Page
 
-Content for angelabartz GitBook.
+Content for Angela Bartz mkdocs site
