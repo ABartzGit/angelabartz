@@ -1,0 +1,9 @@
+site_name: Angela Bartz
+site_author: Angela Bartz
+
+copyright: Copyright &copy; 2020-2026 Angela Bartz
+
+nav: 
+  - Home: index.md
+  - Technical writing portfolio: work.md
+theme: material
