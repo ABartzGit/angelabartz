@@ -13,4 +13,6 @@ I still write a few short stories each year in an attempt to retain at least a s
 
 [abartzmail@gmail.com](mailto:abartzmail@gmail.com)
 
-    
+## Resume
+
+Click [here](pdfs/Resume-Angela-Bartz-2026.pdf) to view a PDF of my resume.
