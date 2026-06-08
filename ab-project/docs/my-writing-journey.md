@@ -7,11 +7,3 @@ It wasn't until I was in college that I first learned about technical writing. B
 I still write a few short stories each year in an attempt to retain at least a small amount of creativity.  Oh, and during the early COVID days, I allowed my (late) dog Riley to start a blog. 
 
 ![Angela and Riley](images/ab-riley.jpg){ style="width:60%" }
-
-## Contact
-
-[abartzmail@gmail.com](mailto:abartzmail@gmail.com)
-
-## Resume
-
-Click [here](pdfs/Resume-Angela-Bartz-2026.pdf) to view a PDF of my resume.
