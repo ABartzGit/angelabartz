@@ -14,7 +14,7 @@ Riley maintained a little blog for a few months in 2020. Quarantine protocols me
     
     ![Riley then and now](../images/riley_thenandnow.png)
 
--   __The Michigan Years__
+-   __The Michigan years__
 
     ---
 
@@ -24,7 +24,7 @@ Riley maintained a little blog for a few months in 2020. Quarantine protocols me
     
     ![The Michigan years](../images/winston_riley_christmas_2005.jpg)
 
--   __The California Years__
+-   __The California years__
 
     ---
 
@@ -44,17 +44,17 @@ Riley maintained a little blog for a few months in 2020. Quarantine protocols me
     
     ![Moving to Washington](../images/riley_roof.jpg)
 
--   __Surgery and Recovery__
+-   __Surgery and recovery__
 
     ---
 
-    Recounting the first ACL surgery and the early steps of recovery.
+    Recounting my first ACL surgery and the early steps of recovery.
     
     [Read post](surgery-and-recovery.md)
     
     ![Surgery and recovery](../images/riley_park.jpg)
 
--   __Surgery and Recovery 2.0__
+-   __Surgery and recovery 2.0__
 
     ---
 
@@ -64,7 +64,7 @@ Riley maintained a little blog for a few months in 2020. Quarantine protocols me
     
     ![Surgery and recover 2](../images/riley_cast2.jpg)
 
--   __Goodbye Fatty Tumors__
+-   __Goodbye fatty tumors__
 
     ---
 
@@ -74,7 +74,7 @@ Riley maintained a little blog for a few months in 2020. Quarantine protocols me
     
     ![Goodbye fatty tumors](../images/riley_fatty_tumor_surgery.jpg)
 
--   __And Finally, Today__
+-   __And finally, today__
 
     ---
 
@@ -82,9 +82,9 @@ Riley maintained a little blog for a few months in 2020. Quarantine protocols me
 
     [Read post](and-finally-today.md)
     
-    ![And finally, today](../images/protest.jpg)
+    ![And finally, today](../images/protest.jpg){ style="width:75%" }
 
--   __Lola's Birthday Party__
+-   __Lola's birthday party__
 
     ---
 
