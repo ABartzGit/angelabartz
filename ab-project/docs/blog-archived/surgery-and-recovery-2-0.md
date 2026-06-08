@@ -1,4 +1,4 @@
-# Surgery and Recovery 2.0
+# Surgery and recovery 2.0
 
 **Author:** Riley  
 **Date:** May 7, 2020  

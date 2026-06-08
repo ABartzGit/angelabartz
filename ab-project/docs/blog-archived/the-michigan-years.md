@@ -1,4 +1,4 @@
-# The Michigan Years
+# The Michigan years
 
 <small>
     **Author:** Riley  

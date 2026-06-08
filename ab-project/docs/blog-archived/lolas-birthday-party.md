@@ -1,4 +1,4 @@
-# Lola's Birthday Party
+# Lola's birthday party
 
 <small>
     **Author:** Riley  

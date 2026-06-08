@@ -1,4 +1,4 @@
-# And Finally, Today
+# And finally, today
 
 <small>
     **Author:** Riley  

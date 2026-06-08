@@ -1,4 +1,4 @@
-# Goodbye Fatty Tumors
+# Goodbye fatty tumors
 
 <small>
     **Author:** Riley  

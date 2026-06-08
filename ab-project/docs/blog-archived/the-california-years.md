@@ -1,4 +1,4 @@
-# The California Years
+# The California years
 
 <small>
     **Author:** Riley  
