@@ -13,10 +13,9 @@ Outside of work, I enjoy reading, playing video games, and watching the latest s
 ## Social
 
 - Discord: [https://discord.com/users/1125538089457160232](https://discord.com/users/1125538089457160232)
-- GitHub: [https://github.com/ABartzGit](https://github.com/ABartzGit)
+- GitHub: [https://github.com/ABartzGit/angelabartz](https://github.com/ABartzGit/angelabartz)
 - LinkedIn: [https://www.linkedin.com/in/angela-bartz/](https://www.linkedin.com/in/angela-bartz/)
 
 ## Resume
 
 Click [here](pdfs/Resume-Angela-Bartz-2026.pdf) to view a PDF of my resume.
-
