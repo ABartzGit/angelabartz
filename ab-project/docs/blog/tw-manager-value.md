@@ -1,6 +1,6 @@
 ![Cross sections](../images/cross-sections.png)
 
-# What a tech writing manager really provides
+# Tech writing managers -- value beyond documentation
 
 <small>June 8, 2026</small>
 

@@ -19,6 +19,7 @@ theme:
   favicon: images/favicon.png
   features: 
     - navigation.expand
+    - navigation.footer
   palette:
     
     # Palette toggle for light mode
@@ -35,11 +36,23 @@ theme:
         icon: material/lightbulb-outline
         name: Switch to light mode
 
+# Extras
+
+extra:
+  social:
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/users/1125538089457160232
+    - icon: fontawesome/brands/github
+      link: https://github.com/ABartzGit/angelabartz
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/in/angela-bartz/
+
 # Navigation
 nav: 
   - About me: index.md
   - My writing journey: my-writing-journey.md
   - Technical writing portfolio: my-portfolio.md
   - Blog:
-    - What a tech writing manager really provides: blog/tw-manager-value.md
-    
+    - Tech writing managers -- value beyond documentation: blog/tw-manager-value.md
+  - Archived:
+    - Riley's blog: blog-archived/riley-blog.md
