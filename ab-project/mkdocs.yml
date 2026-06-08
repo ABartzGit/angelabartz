@@ -39,7 +39,6 @@ theme:
 
 # Navigation
 nav: 
-  - Home: index.md
   - My journey: my-journey.md
   - Technical writing portfolio: my-portfolio.md
   - Blog:
