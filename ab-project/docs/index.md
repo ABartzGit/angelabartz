@@ -1,18 +1,7 @@
-# My journey
+# About me
 
-I  started writing when I was about 10 years old, giving short stories to my friends for special occasions. Those early works, however, are classified and not available for public consumption. 
+I grew up in metro Detroit and graduated from the University of Detroit Mercy before heading west to the Bay Area in 2008. In 2017, I made my way to the Seattle area, where I’ve been based ever since.
 
-It wasn't until I was in college that I first learned about technical writing. Because of this, I like to be an advocate for English majors and speak to students about the possibilities associated with an English degree as well as what it's like to work in the software industry.
-
-I still write a few short stories each year in an attempt to retain at least a small amount of creativity. I'm attempting to bake more these days and also trying to learn Greek. Oh, and during the early COVID days, I allowed my (late) dog Riley to start a blog. 
+Outside of work, I enjoy reading, playing video games, and watching the latest streams. I also like to bake, and I'm finally attempting to garden. The jury is still out as to whether I enjoy this. Oh, and I'm also learning Greek!
 
 ![Angela photo](images/ab-image.png){ style="width:60%" }
-
-
-## Contact
-
-[abartzmail@gmail.com](mailto:abartzmail@gmail.com)
-
-## Resume
-
-Click [here](pdfs/Resume-Angela-Bartz-2026.pdf) to view a PDF of my resume.

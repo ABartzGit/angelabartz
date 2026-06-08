@@ -3,8 +3,6 @@
 site_name: Angela Bartz
 site_author: Angela Bartz
 site_url: https://abartzgit.github.io/angelabartz/
-extra:
-  homepage: https://abartzgit.github.io/angelabartz/my-journey
 
 # Copyright
 copyright: Copyright &copy; 2026 Angela Bartz
@@ -39,7 +37,8 @@ theme:
 
 # Navigation
 nav: 
-  - My journey: my-journey.md
+  - About me: index.md
+  - My writing journey: my-writing-journey.md
   - Technical writing portfolio: my-portfolio.md
   - Blog:
     - What a tech wrting manager really provides: blog/tw-manager-value.md
