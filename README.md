@@ -1,3 +1,3 @@
-# Main Page
+# README
 
 Content for Angela Bartz mkdocs site
