@@ -1,0 +1,45 @@
+# Project information
+
+site_name: Angela Bartz
+site_author: Angela Bartz
+site_url: https://abartzgit.github.io/angelabartz/
+
+# Copyright
+copyright: Copyright &copy; 2026 Angela Bartz
+
+# Extensions
+markdown_extensions:
+  - attr_list
+  - md_in_html
+
+# Configuration
+theme: 
+  name: material
+  logo: images/logo.png
+  favicon: images/favicon.png
+  features: 
+    - navigation.expand
+  palette:
+
+    - primary: blue grey
+
+      # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/toggle-switch 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to light mode
+
+# Navigation
+
+nav: 
+  - Home: my-journey.md
+  - Technical writing portfolio: work.md
+  - Blog:
+    - What a tech wrting manager really provides: blog/tw-manager-value.md
+    
