@@ -1,5 +1,4 @@
 # Project information
-
 site_name: Angela Bartz
 site_author: Angela Bartz
 site_url: https://abartzgit.github.io/angelabartz/
@@ -7,19 +6,24 @@ site_url: https://abartzgit.github.io/angelabartz/
 # Copyright
 copyright: Copyright &copy; 2026 Angela Bartz
 
-# Extensions
+# Add extensions for Markdown processing, including support for attributes, Markdown in HTML, and admonitions.
 markdown_extensions:
   - attr_list
   - md_in_html
+  - admonition
 
 # Configuration
 theme: 
   name: material
   logo: images/logo.png
   favicon: images/favicon.png
+
+  # Auto-expand the left navigation and include previous and next navigation in the footer.
   features: 
     - navigation.expand
     - navigation.footer
+  
+  # Set the color palette for light and dark mode, and include a toggle to switch between them.
   palette:
     
     # Palette toggle for light mode
@@ -37,7 +41,6 @@ theme:
         name: Switch to light mode
 
 # Extras
-
 extra:
   social:
     - icon: fontawesome/brands/discord
@@ -47,12 +50,13 @@ extra:
     - icon: fontawesome/brands/linkedin
       link: https://www.linkedin.com/in/angela-bartz/
 
-# Navigation
+# Site navigation
 nav: 
   - About me: index.md
   - My writing journey: my-writing-journey.md
   - Technical writing portfolio: my-portfolio.md
   - Blog:
-    - Tech writing managers -- value beyond documentation: blog/tw-manager-value.md
+    - June 8, 2026 Tech writing managers -- value beyond documentation: blog/tw-manager-value.md
+    - July 2, 2026 Creating open-source site with MkDocs: blog/mkdocs-site.md
   - Archived:
     - Riley's blog: blog-archived/riley-blog.md
