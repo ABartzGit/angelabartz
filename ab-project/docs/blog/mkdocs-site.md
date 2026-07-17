@@ -14,6 +14,8 @@ Review the [MkDocs Installation](https://www.mkdocs.org/user-guide/installation/
 - A text editor. I use [Visual Studio Code](https://code.visualstudio.com/). Other popular ones are [Cursor](https://cursor.com/home) and [Sublime](https://www.sublimetext.com/).
 - A public [GitHub repository](https://github.com/): You need this to store your files in a public GitHub repository and to deploy it in [GitHub Pages](https://docs.github.com/en/pages).
 
+  - 
+
 You'll also want to have a basic understanding of [Markdown](https://www.markdownguide.org/cheat-sheet/), which is a simple markup language.
 
 ## Installation
@@ -29,7 +31,7 @@ pip install mkdocs
 
 ## Create your project
 
-Now that MkDocs is installed, run the following commands to create your project. The example below creates a project called **my-project** and stores it in the **C:\Users\<user>\repository\my-site** folder.
+Now that MkDocs is installed, run the following commands to create your project. The example below creates a project called **my-project** and stores it in the **C:\Users\<username\>\repository\my-site** folder.
 
     # Change directories to the repository where you'll store these files.
     # This assumes you have a GitHub repository called "my-site".
@@ -57,7 +59,7 @@ mkdocs serve
 !!! note
     Keep this Terminal window open while working on your site. The server will maintain a log of events that it encounters while you make updates.
 
-To see the site, open a browser and navigate to 127.0.0.1:8000. You should see a basic page that looks similar to the following image:
+To see the site, open a browser and navigate to 127.0.0.1:8000 (or localhost:8000). You should see a basic page that looks similar to the following image:
 
 ![Initial MkDocs site](../images/simple-mkdocs-site.png){ style="width: 75%" }
 
