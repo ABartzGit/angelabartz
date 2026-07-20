@@ -498,13 +498,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Build the site">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-gitingore-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a gitingore file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-in-your-files" class="md-nav__link">
+  <a href="#check-in-your-source-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check in your files
+        Check in your source files
       
     </span>
   </a>
@@ -751,13 +768,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Build the site">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-a-gitingore-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Add a gitingore file
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
-  <a href="#check-in-your-files" class="md-nav__link">
+  <a href="#check-in-your-source-files" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Check in your files
+        Check in your source files
       
     </span>
   </a>
@@ -801,12 +835,12 @@
 <li><a href="https://www.python.org/">Python</a>: Run <code>python --version</code> in Command Prompt or Terminal to see if you have this.</li>
 <li><a href="https://pypi.org/project/pip/">pip</a>: Run <code>pip --version</code> in Command Prompt or Terminal to see if you have this. </li>
 <li>A text editor. I use <a href="https://code.visualstudio.com/">Visual Studio Code</a>. Other popular ones are <a href="https://cursor.com/home">Cursor</a> and <a href="https://www.sublimetext.com/">Sublime</a>.</li>
-<li>
-<p>A public <a href="https://github.com/">GitHub repository</a>: You need this to store your files in a public GitHub repository and to deploy it in <a href="https://docs.github.com/en/pages">GitHub Pages</a>.</p>
-</li>
-<li></li>
+<li>A public <a href="https://github.com/">GitHub repository</a>: You need this to store your files in a public GitHub repository and to deploy it in <a href="https://docs.github.com/en/pages">GitHub Pages</a>. <ul>
+<li>Clone your repository so that you can work with a local copy.</li>
 </ul>
-<p>You'll also want to have a basic understanding of <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a>, which is a simple markup language.</p>
+</li>
+</ul>
+<p>You'll also want to have a basic understanding of <a href="https://docs.github.com/en/get-started">GitHub</a> and <a href="https://www.markdownguide.org/cheat-sheet/">Markdown</a>.</p>
 <h2 id="installation">Installation</h2>
 <p>Run the following command to install MkDocs:</p>
 <pre><code>pip install mkdocs
@@ -889,13 +923,26 @@ theme: readthedocs
 mkdocs build
 </code></pre>
 <p>The <code>build</code> command will generate a static website in a new <strong>/site</strong> folder, which sits directly under your project folder. At this point, you can take that folder and deploy your site on a web server. Or you can deploy it in <a href="https://docs.github.com/en/pages">GitHub Pages</a>.</p>
-<h2 id="check-in-your-files">Check in your files</h2>
-<p>This is where its important that you have a GitHub repository. Before deploying, commit and check in all of your files.</p>
-<pre><code># You don't want to check documentation builds in your repository.
-# Create a gitignore file and add the contents of the site/ folder to it.
-echo &quot;site/&quot; &gt;&gt; .gitignore
+<h3 id="add-a-gitingore-file">Add a gitingore file</h3>
+<p>You don't want to check or track documentation builds in your repository. The files within the <strong>site/</strong> fodler are simply output files rather than source files. Create a gitignore file and add the contents of the <strong>site/</strong> folder to it so that these files aren't tracked.</p>
+<pre><code>echo &quot;site/&quot; &gt;&gt; .gitignore
+</code></pre>
+<p>Now verify that the <strong>site/</strong> folder is ignored.</p>
+<pre><code>git status
+</code></pre>
+<p>You shouln't see the <strong>site/</strong> folder in the output of <code>git status</code>. If you do see <strong>site/</strong>, it could be that git is saving your .gitignore file with the wrong text encoding (like UTF-16 instead of UTF-8) or it contains a hidden character called a Byte Order Mark (BOM). Run the following commands to fix the gitignore file.</p>
+<pre><code># Run this command in your PowerShell terminal to rewrite the file cleanly:
+Set-Content -Path .gitignore -Value &quot;site/&quot; -Encoding utf8
 
-# Review the list of new and changed files
+# Run this command to verify that Git actually reads the text inside the file now:
+git check-ignore -v site/index.html
+
+# Run this command to verify the site file is ignored:
+git status
+</code></pre>
+<h2 id="check-in-your-source-files">Check in your source files</h2>
+<p>Before deploying, commit and check in all of your files.</p>
+<pre><code># Review the list of new and changed files
 git status
 
 # Add the new and changed files to the repo
