@@ -9,14 +9,13 @@ For several years, I paid for a site that hosted information about me and includ
 
 Review the [MkDocs Installation](https://www.mkdocs.org/user-guide/installation/) page for specific requirements and installation steps. The TL;DR is that you'll need the following:
 
-- [Python](https://www.python.org/): Run ```python --version``` in Command Prompt or Terminal to see if you have this.
-- [pip](https://pypi.org/project/pip/): Run ```pip --version``` in Command Prompt or Terminal to see if you have this. 
-- A text editor. I use [Visual Studio Code](https://code.visualstudio.com/). Other popular ones are [Cursor](https://cursor.com/home) and [Sublime](https://www.sublimetext.com/).
-- A public [GitHub repository](https://github.com/): You need this to store your files in a public GitHub repository and to deploy it in [GitHub Pages](https://docs.github.com/en/pages).
+* [Python](https://www.python.org/): Run ```python --version``` in Command Prompt or Terminal to see if you have this.
+* [pip](https://pypi.org/project/pip/): Run ```pip --version``` in Command Prompt or Terminal to see if you have this. 
+* A text editor. I use [Visual Studio Code](https://code.visualstudio.com/). Other popular ones are [Cursor](https://cursor.com/home) and [Sublime](https://www.sublimetext.com/).
+* A public [GitHub repository](https://github.com/): You need this to store your files in a public GitHub repository and to deploy it in [GitHub Pages](https://docs.github.com/en/pages). 
+    * Clone your repository so that you can work with a local copy.
 
-  - 
-
-You'll also want to have a basic understanding of [Markdown](https://www.markdownguide.org/cheat-sheet/), which is a simple markup language.
+You'll also want to have a basic understanding of [GitHub](https://docs.github.com/en/get-started) and [Markdown](https://www.markdownguide.org/cheat-sheet/).
 
 ## Installation
 
@@ -128,15 +127,38 @@ mkdocs build
 
 The ```build``` command will generate a static website in a new **/site** folder, which sits directly under your project folder. At this point, you can take that folder and deploy your site on a web server. Or you can deploy it in [GitHub Pages](https://docs.github.com/en/pages).
 
-## Check in your files
+### Add a gitingore file
 
-This is where its important that you have a GitHub repository. Before deploying, commit and check in all of your files.
+You don't want to check or track documentation builds in your repository. The files within the **site/** fodler are simply output files rather than source files. Create a gitignore file and add the contents of the **site/** folder to it so that these files aren't tracked.
 
 ```
-# You don't want to check documentation builds in your repository.
-# Create a gitignore file and add the contents of the site/ folder to it.
 echo "site/" >> .gitignore
+```
 
+Now verify that the **site/** folder is ignored.
+
+```
+git status
+```
+
+You shouln't see the **site/** folder in the output of ``git status``. If you do see **site/**, it could be that git is saving your .gitignore file with the wrong text encoding (like UTF-16 instead of UTF-8) or it contains a hidden character called a Byte Order Mark (BOM). Run the following commands to fix the gitignore file.
+
+```
+# Run this command in your PowerShell terminal to rewrite the file cleanly:
+Set-Content -Path .gitignore -Value "site/" -Encoding utf8
+
+# Run this command to verify that Git actually reads the text inside the file now:
+git check-ignore -v site/index.html
+
+# Run this command to verify the site file is ignored:
+git status
+```
+
+## Check in your source files
+
+Before deploying, commit and check in all of your files.
+
+```
 # Review the list of new and changed files
 git status
 
@@ -149,6 +171,8 @@ git commit -m "Initial checkin of my project"
 # Push the changes to the repository
 git push
 ```
+
+
 
 ## Deploy the site in GitHub Pages
 
