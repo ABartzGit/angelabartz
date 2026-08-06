@@ -31,15 +31,13 @@ The four accepted the job. Before leaving the inn, Jayn drank two more bowls of 
 
 For the first several hours, the journey through the woods was quiet.
 
-The path climbed gradually toward the mountain while the trees crowded closer around them. Somewhere around the halfway point, the party noticed tracks unlike any they recognized. Each footprint showed five toes, but no heel.
-
-They studied the impressions without reaching a conclusion and continued north.
+The path climbed gradually toward the mountain while the trees crowded closer around them. Somewhere around the halfway point, Jayn heard a snap of branches, and she went off to investigate. Alone, she noticed tracks unlike any she had seen before. Each footprint showed five toes, but no heel. Coming back to the group, she said nothing.
 
 Darkness overtook them before they reached the church. Elisandra's sword began to shine, casting enough light for her to see the path ahead. The others relied on their natural night vision as they moved deeper into the forest.
 
 At last, the church emerged in the distance. Moonlight reflected from its stained-glass roof. Even from afar, the structure appeared enormous—far larger than the abandoned mountain chapel they might have expected to find. Then a howl broke the silence.
 
-Jayn answered it, and a wolf charged from the darkness, snarling as it came. Three more followed close behind.
+Jayn answered it (presumably informing them that there was a nice, tasty, morsel of a halfling with her), and a wolf charged from the darkness, snarling as it came. Three more followed close behind.
 
 The four strangers fought together for the first time. Whatever uncertainty existed between them had to be set aside until all four wolves lay defeated. Once the forest fell quiet again, the party continued toward the waiting church.
 
@@ -51,7 +49,7 @@ The building loomed above them when they reached its entrance.
 
 Runic writing had been etched into the surrounding stone. Overhead, two silver discs — each approximately fifteen feet across — glowed from the ceiling in separate parts of the structure. Blood marked the ground outside. Its trail continued through the entrance.
 
-Cadric went in first and found two bodies lying on the floor, both covered in blood. Each appeared to have been killed by a long, sharp object. Elisandra examined the area and found more of the strange five-toed, heel-less footprints.
+Cadric went in first and found two bodies lying on the floor, both covered in blood. Each appeared to have been killed by a long, sharp object. Elisandra examined the area and found some strange five-toed, heel-less footprints, the same that Jayn had seen but not disclosed.
 
 Symbols had been carved throughout the entrance chamber. Farther inside stood a wooden door reinforced by decorative metal bands. The metal shone brightly enough to illuminate an inscription:
 
