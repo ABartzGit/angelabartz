@@ -11,6 +11,8 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - admonition
+  - toc:
+      toc_depth: 2
 
 # Configuration
 theme: 
@@ -58,5 +60,9 @@ nav:
   - Blog:
     - July 2, 2026 Creating an open-source site with MkDocs: blog/mkdocs-site.md
     - June 8, 2026 Tech writing managers -- value beyond documentation: blog/tw-manager-value.md
+  - The Adventures of Ravenlost:
+    - Chapter 1:
+      - The Black Lantern Inn: ravenlost/chapter-01-the-black-lantern-inn.md
+      - Notes: ravenlost/chapter-01-dnd-notes.md
   - Archived:
     - Riley's blog: blog-archived/riley-blog.md
