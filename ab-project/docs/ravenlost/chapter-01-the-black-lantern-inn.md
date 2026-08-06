@@ -1,4 +1,4 @@
-# Chapter 1 — The Black Lantern Inn
+# The Black Lantern Inn
 
 > *The Mists have a way of gathering those who were never meant to meet.*
 
