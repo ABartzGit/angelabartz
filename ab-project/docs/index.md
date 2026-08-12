@@ -2,7 +2,13 @@
 
 I grew up in metro Detroit and graduated from the University of Detroit Mercy before heading west to the Bay Area in 2008. In 2017, I made my way to the Seattle area, where I’ve been based ever since.
 
-Outside of work, I enjoy reading, playing video games, and watching the latest streams. (Follow our DnD group's adventures in Ravenloft [here](https://abartzgit.github.io/ravenlost/).) I like to bake, and I'm attempting to garden. Oh, and I'm also learning Greek! 
+Outside of work, I like to bake, and I'm attempting to garden. I also enjoy reading, and I maintain my book club's website. You can find our latest, upcoming, and prior reads [here](https://sjvkirkland.github.io/womens-book-group/).
+
+Some friends and I recently started a DnD campaign. You can follow along on our adventures in Ravenloft [here](https://abartzgit.github.io/ravenlost/). 
+
+Besides table-top games, I also enjoy playing video games. I'm currently leveling-up my POE monk.  
+
+Oh, and I'm learning Greek! 
 
 ![Angela photo](images/ab-image.png){ style="width:60%" }
 
