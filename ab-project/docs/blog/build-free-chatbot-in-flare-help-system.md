@@ -14,7 +14,7 @@ Here's how I built it.
 
 Not exactly. It's more of a lightweight, client-side search assistant. It loads a JSON index of the documentation, searches it in the browser, and returns the most relevant help topics.
 
-There's no large language model that interprets the user's question and generates an answer. It's better described as a **chat-style documentation search assistant**. But for my use case, these are its advantages.
+There's no large language model that interprets the user's question and generates an answer. It's better described as a **chat-style documentation search assistant**. But for my use case, this simplicity has some advantages.
 
 There's:
 
@@ -30,7 +30,7 @@ For my small internal help system, this was enough. And because the search index
 
 These are the tools I used for this project.
 
-- MadCap Flare to create adn build the help system 
+- MadCap Flare to create and build the help system 
 - VS Code editor to create scripts and style sheets
 - Python to crawl the documentation
 - Live Server extension in VS Code
@@ -39,9 +39,9 @@ These are the tools I used for this project.
 
 The finished system has three main pieces:
 
-1. **A Python crawler** that reads the generated Flare HTML5 topics and creates a JSON search index
-2. **A JavaScript search widget** that loads that JSON file and searches it when someone asks a question
-3. A chatbot **CSS** that turns the search interface into a floating chat widget
+1. A Python crawler that reads the generated Flare HTML5 topics and creates a JSON search index
+2. A JavaScript search widget that loads that JSON file and searches it when someone asks a question
+3. A CSS stylesheet that turns the search interface into a floating chat widget
 
 The basic architecture looks like this:
 
@@ -68,7 +68,7 @@ Everything happens locally in the generated help system. **None of the documenta
 
 ## Step 1: Crawl the Flare HTML5 Output folder
 
-The first step is to generate the Flare HTML5 output and then crawl the **generated HTML5 output** folder. Crawling the output folder ensures that the search index represents what users can actually access. 
+The first step is to build the Flare HTML5 output and then crawl the resulting output folder. Crawling the output folder ensures that the search index represents what users can actually access. 
 
 For example:
 
@@ -256,15 +256,19 @@ The resulting JSON looks something like:
 }
 ```
 
-## Step 2: Load the JSON in JavaScript
+## Step 2: Verify the generated JSON file
 
-For the chatbot to load the JSON files that was just created, store generated search index the Content folder at:
+The Python crawler saves the generated search index to the Resources folder in the built HTML5 output:
 
 ```text
-Content
-└── Resources
-    └── flare_docs.json
+Output
+└── AB
+    └── HTML5
+        └── Resources
+            └── flare_docs.json
 ```
+
+When the HTML5 folder is served as the site's root, the chatbot can access this file at /Resources/flare_docs.json.
 
 ## Step 3: Add the chat widget script to the Flare project
 
@@ -543,7 +547,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 ## Step 4: Add a separate chatbot CSS
 
-During development, Flare's build validation complained about some CSS used by the widget, so I created a separate CSS, which made styling and troubleshooting much easier. 
+During development, Flare's build validation complained about some of the widget's CSS, so I moved the chatbot styles into a separate stylesheet. This made styling and troubleshooting much easier. 
 
 I stored the new CSS in the Content folder at:
 
@@ -554,7 +558,7 @@ Content
         └── ChatBotStyles.css
 ```
 
-The contents of this styleshoot look like:
+The contents of this stylesheet look like:
 
 ```css
 /* CHAT WIDGET STYLES */
@@ -698,17 +702,17 @@ The contents of this styleshoot look like:
 
 1. In Flare, build the help system to generate the output. 
 2. Open the Flare Output folder in VS Code.
-3. Right click on the default topic (Default.htm, in my case) and select **Open with Live Server**.
+3. Right-click on the default topic (Default.htm, in my case) and select **Open with Live Server**.
 
    This opens the local help system in your default browser.
 
 ## Step 6: Search the documentation
 
-The search doesn't require an AI model. Instead, the questions are split into words and compared against the title and body text of each topic. 
+The search doesn't require an AI model. Instead, the user's question is split into words and compared against the title and body text of each topic. 
 
 ![chatbot image](../images/chatbot.png)
 
-Matches in the title receive a higher score than matches buried in the topic body. It's simplistic, but for a relatively small help system it provides a surprisingly useful search experience.
+Matches in the title receive a higher score than matches buried in the topic body. It's simple, but for a relatively small help system it provides a surprisingly useful search experience.
 
 Because the Python crawler already generates the correct URL, the JavaScript doesn't need to manipulate it. That ended up being another useful design decision:
 
