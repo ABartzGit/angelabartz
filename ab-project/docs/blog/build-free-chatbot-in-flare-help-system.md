@@ -1,4 +1,8 @@
+![Chatbot in Flare](../images/chatbot-blog-banner.png)
+
 # Building a free search chatbot for a MadCap Flare help system
+
+<small>August 12, 2026</small>
 
 I recently wanted to experiment with adding a chatbot-style search experience to a MadCap Flare help system, but I had a few constraints:
 

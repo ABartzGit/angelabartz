@@ -1,4 +1,4 @@
-![Cross sections](../images/cross-sections.png)
+![Cross sections](../images/tw-manager-blog-banner.png)
 
 # Tech writing managers -- value beyond documentation
 

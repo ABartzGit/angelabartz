@@ -1,5 +1,6 @@
+![MkDocs](../images/mkdocs-blog-banner.png)
 
-# Creating an open-source site with MkDocs
+# Creating an open-source website with MkDocs
 
 <small>July 2, 2026</small>
 
