@@ -22,7 +22,6 @@ theme:
 
   # Auto-expand the left navigation and include previous and next navigation in the footer.
   features: 
-    - navigation.expand
     - navigation.footer
   
   # Set the color palette for light and dark mode, and include a toggle to switch between them.
