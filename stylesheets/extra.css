@@ -1,0 +1,13 @@
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.expertise-card {
+  padding: 1.5rem;
+  border-radius: 12px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
