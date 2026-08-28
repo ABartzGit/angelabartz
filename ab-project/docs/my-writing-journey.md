@@ -22,7 +22,7 @@ and product teams in the software industry.
 
 I still write a few short stories each year to keep a little creative writing
 in my life. And during the early days of COVID, I even let my late dog Riley
-start a blog.
+start a [blog](blog-archived/riley-blog.md).
 
 <figure class="writing-journey__photo">
   <img src="../images/ab-riley.jpg"
