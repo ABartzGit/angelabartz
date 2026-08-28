@@ -6,9 +6,9 @@
   display: grid;
   grid-template-columns: minmax(0, 1.5fr) minmax(160px, 0.6fr);
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2.5rem 3rem;
-  margin: 1rem 0 2.5rem;
+  margin: 1rem 0 3rem;
   border-radius: 18px;
 
   background:
@@ -88,7 +88,7 @@
 }
 
 .home-section {
-  margin: 2.25rem 0;
+  margin: 2.5rem 0;
 }
 
 .home-section__heading {
@@ -170,10 +170,6 @@
 /* --------------------------------
    Featured work
 --------------------------------- */
-
-.featured-work {
-  padding-top: 1rem;
-}
 
 .featured-grid {
   display: grid;
