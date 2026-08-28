@@ -100,7 +100,7 @@
     </li>
 
     <li>
-      <a href="pdfs/H2ODeepLearningBooklet.pdf">
+      <a href="../pdfs/H2ODeepLearningBooklet.pdf">
         Deep Learning Booklet
       </a>
     </li>
@@ -134,19 +134,19 @@
 
   <ul class="portfolio-project__samples">
     <li>
-      <a href="pdfs/SkytreePythonSDKQuickStart.pdf">
+      <a href="../pdfs/SkytreePythonSDKQuickStart.pdf">
         Skytree Python SDK Quick Start Guide
       </a>
     </li>
 
     <li>
-      <a href="pdfs/SkytreeServerUserGuide.pdf">
+      <a href="../pdfs/SkytreeServerUserGuide.pdf">
         Skytree Server User Guide
       </a>
     </li>
 
     <li>
-      <a href="pdfs/SkytreeRESTAPI.pdf">
+      <a href="../pdfs/SkytreeRESTAPI.pdf">
         Skytree REST API Guide
       </a>
     </li>
@@ -178,25 +178,25 @@
 
   <ul class="portfolio-project__samples">
     <li>
-      <a href="pdfs/ClearPassPolicyManager.pdf">
+      <a href="../pdfs/ClearPassPolicyManager.pdf">
         ClearPass Policy Manager User Guide
       </a>
     </li>
 
     <li>
-      <a href="pdfs/Aruba_CPPM_API_Guide.pdf">
+      <a href="../pdfs/Aruba_CPPM_API_Guide.pdf">
         ClearPass Policy Manager API Guide
       </a>
     </li>
 
     <li>
-      <a href="pdfs/AirWaveInstallation.pdf">
+      <a href="../pdfs/AirWaveInstallation.pdf">
         AirWave Installation Guide
       </a>
     </li>
 
     <li>
-      <a href="pdfs/AirWave7-7UserGuide.pdf">
+      <a href="../pdfs/AirWave7-7UserGuide.pdf">
         AirWave 7.7 User Guide
       </a>
     </li>
