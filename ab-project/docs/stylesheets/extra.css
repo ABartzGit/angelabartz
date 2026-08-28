@@ -810,6 +810,33 @@
   margin-top: 1rem;
 }
 
+
+/* --------------------------------
+   Blog article metadata
+--------------------------------- */
+
+.blog-article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem 0.75rem;
+  margin-top: -0.35rem;
+  margin-bottom: 1.75rem;
+  color: var(--md-default-fg-color--light);
+  font-size: 0.78rem;
+}
+
+.blog-article__meta span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.blog-article__meta span:not(:last-child)::after {
+  content: "·";
+  margin-left: 0.75rem;
+  color: var(--md-default-fg-color--lighter);
+}
+
 /* --------------------------------
    Tablet
 --------------------------------- */

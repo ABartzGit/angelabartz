@@ -1,8 +1,13 @@
 ![Chatbot in Flare](../images/chatbot-blog-banner.png)
 
-# Building a free search chatbot for a MadCap Flare help system
+# Build a free search chatbot for a MadCap Flare help system
 
-<small>August 12, 2026</small>
+<div class="blog-article__meta">
+  <span>August 12, 2026</span>
+  <span>Documentation tooling</span>
+  <span>MadCap Flare</span>
+  <span>Python + JavaScript</span>
+</div>
 
 I recently wanted to experiment with adding a chatbot-style search experience to a MadCap Flare help system, but I had a few constraints:
 
@@ -30,14 +35,16 @@ There's:
 
 For my small internal help system, this was enough. And because the search index is generated from the actual Flare HTML5 output, the assistant stays closely tied to what users can really access.
 
-## Requirements
+## Tools and technologies
 
 These are the tools I used for this project.
 
-- MadCap Flare to create and build the help system 
-- VS Code editor to create scripts and style sheets
-- Python to crawl the documentation
-- Live Server extension in VS Code
+- **MadCap Flare** to create and build the help system
+- **Python and Beautiful Soup** to crawl the generated HTML5 documentation
+- **JSON** to store the searchable documentation index
+- **JavaScript** to search the index and power the chat interface
+- **HTML and CSS** to create and style the floating widget
+- **VS Code and Live Server** to develop and test the generated help system locally
 
 ## How it works
 
@@ -68,7 +75,10 @@ JavaScript search
 Floating chat widget
 ```
 
-Everything happens locally in the generated help system. **None of the documentation is sent to an external service**.
+Everything happens locally in the generated help system. 
+
+!!! custom "Note"
+    None of the documentation is sent to an external service.
 
 ## Step 1: Crawl the Flare HTML5 Output folder
 
@@ -500,7 +510,7 @@ function initWidget() {
 
           <div id="chat-input-container">
             <input id="chat-input" placeholder="Ask a question..." />
-            <button id="chat-send">Ask</button>
+            <button id="chat-send" class="send-button">Ask</button>
           </div>
         </div>
       </div>
