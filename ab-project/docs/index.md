@@ -368,7 +368,7 @@ hide:
       </a>
 
 
-      <a href="https://github.com/ABartzGit"
+      <a href="https://github.com/ABartzGit/angelabartz"
          class="connect-link"
          target="_blank"
          rel="noopener">
