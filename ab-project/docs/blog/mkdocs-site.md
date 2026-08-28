@@ -1,22 +1,28 @@
 ![MkDocs](../images/mkdocs-blog-banner.png)
 
-# Creating an open-source website with MkDocs
+# Create a website with MkDocs and GitHub Pages
 
-<small>July 2, 2026</small>
+<div class="blog-article__meta">
+  <span>July 2, 2026</span>
+  <span>Docs as code</span>
+  <span>MkDocs</span>
+  <span>GitHub Pages</span>
+</div>
 
-For several years, I paid for a site that hosted information about me and included my writing samples. As a technical writer, with (too) many years of GitHub and GitLab experience, there was no reason why I couldn't just do this with open source tools. So during my current hiatus from full-time employment, I took this as an opportunity to convert my paid site. And I chose to do this with [MkDocs](https://www.mkdocs.org/). Follow along with this blog if you want to create one for yourself.
+For several years, I paid for a website that hosted information about me and included my writing samples. But as a technical writer with years of GitHub and GitLab experience, I eventually wondered why I wasn't just building and hosting the site myself with open-source tools.
 
-## Requirements
+So I decided to rebuild my site with [MkDocs](https://www.mkdocs.org/) and publish it with GitHub Pages. This tutorial walks through the same basic process so you can create one for yourself.
 
-Review the [MkDocs Installation](https://www.mkdocs.org/user-guide/installation/) page for specific requirements and installation steps. The TL;DR is that you'll need the following:
+## Before you begin
 
-* [Python](https://www.python.org/): Run ```python --version``` in Command Prompt or Terminal to see if you have this.
-* [pip](https://pypi.org/project/pip/): Run ```pip --version``` in Command Prompt or Terminal to see if you have this. 
-* A text editor. I use [Visual Studio Code](https://code.visualstudio.com/). Other popular ones are [Cursor](https://cursor.com/home) and [Sublime](https://www.sublimetext.com/).
-* A public [GitHub repository](https://github.com/): You need this to store your files in a public GitHub repository and to deploy it in [GitHub Pages](https://docs.github.com/en/pages). 
-    * Clone your repository so that you can work with a local copy.
+Before you start, you'll need:
 
-You'll also want to have a basic understanding of [GitHub](https://docs.github.com/en/get-started) and [Markdown](https://www.markdownguide.org/cheat-sheet/).
+- **Python** — Run `python --version` to check whether it's installed.
+- **pip** — Run `pip --version` to check whether it's installed.
+- **A text editor** — I use Visual Studio Code.
+- **A public GitHub repository** — You'll use this to store your source files and publish the site with GitHub Pages.
+
+You'll also want a basic understanding of [GitHub](https://docs.github.com/en/get-started), Git, and [Markdown](https://www.markdownguide.org/cheat-sheet/).
 
 ## Installation
 
@@ -75,7 +81,7 @@ At this point, you'll want to update the **index.md** file and personalize your 
 When adding pages and files, be aware of your project's file structure. In my site, any page that's a top-level page in my navigation is stored directly in the **/docs** folder. I store my blog posts in a **/docs/blog** folder. And I store my images in a **/docs/images** folder. 
 
 !!! note
-    At this point, only the **mkdocs.yml** file should exist outside of the **/docs** folder.
+    MkDocs site content is stored in the **/docs** folder, while the **mkdocs.yml** configuration file is stored at the project root.
 
 Now let's create a new file called **my-portfolio.md** in the **/docs** folder. 
 
@@ -111,8 +117,8 @@ theme: readthedocs
 
 There are a number of third-party themes that you can choose from to personalize your project. These are available at the following sites:
 
-- [MkDocs themes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes)
-- [MkDocs themes catalog](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes) 
+- [MkDocs themes](https://pawamoy.github.io/mkdocs-gallery/)
+- [MkDocs themes catalog](https://github.com/mkdocs/catalog#-theming) 
 
 After you choose and install the theme you want, just change the ```theme``` element in the **mkdocs.yml** file. In fact, review the documentation for your theme to see all of the additional configurations you can add to your **mkdocs.yml** file. You can view [my yml file](https://raw.githubusercontent.com/ABartzGit/angelabartz/refs/heads/main/ab-project/mkdocs.yml), which is pretty basic, but so far does all that I need.
 
@@ -128,9 +134,9 @@ mkdocs build
 
 The ```build``` command will generate a static website in a new **/site** folder, which sits directly under your project folder. At this point, you can take that folder and deploy your site on a web server. Or you can deploy it in [GitHub Pages](https://docs.github.com/en/pages).
 
-### Add a gitingore file
+### Add a .gitignore file
 
-You don't want to check or track documentation builds in your repository. The files within the **site/** fodler are simply output files rather than source files. Create a gitignore file and add the contents of the **site/** folder to it so that these files aren't tracked.
+You don't want to check or track documentation builds in your repository. The files within the **site/** folder are simply output files rather than source files. Create a .gitignore file and add the contents of the **site/** folder to it so that these files aren't tracked.
 
 ```
 echo "site/" >> .gitignore
@@ -142,7 +148,7 @@ Now verify that the **site/** folder is ignored.
 git status
 ```
 
-You shouln't see the **site/** folder in the output of ``git status``. If you do see **site/**, it could be that git is saving your .gitignore file with the wrong text encoding (like UTF-16 instead of UTF-8) or it contains a hidden character called a Byte Order Mark (BOM). Run the following commands to fix the gitignore file.
+You shouldn't see the **site/** folder in the output of ``git status``. If you do see **site/**, it could be that git is saving your .gitignore file with the wrong text encoding (like UTF-16 instead of UTF-8) or it contains a hidden character called a Byte Order Mark (BOM). Run the following commands to fix the gitignore file.
 
 ```
 # Run this command in your PowerShell terminal to rewrite the file cleanly:
@@ -157,7 +163,7 @@ git status
 
 ## Check in your source files
 
-Before deploying, commit and check in all of your files.
+Before deploying, commit and push your source files to GitHub.
 
 ```
 # Review the list of new and changed files
@@ -188,3 +194,18 @@ And that's it! After GitHub finishes the deployment, you can see your site live 
 ```
 <yourGitHubHandle>.github.io/<yourRepository>
 ```
+
+## Where to go next
+
+At this point, you have a working MkDocs site stored in GitHub and published with GitHub Pages. From here, you can start treating it like any other docs-as-code project.
+
+Some useful next steps include:
+
+- Choose and customize a theme.
+- Add additional pages and navigation.
+- Create custom CSS for your site's design.
+- Add images and other assets.
+- Explore MkDocs plugins and extensions.
+- Set up a custom domain.
+
+And because the site's source lives in GitHub, every change can be versioned, reviewed, and deployed using the same Git workflow you might use for a documentation project.
