@@ -601,7 +601,7 @@
 
 
 /* --------------------------------
-   Portfolio section
+   Portfolio page
 --------------------------------- */
 
 .portfolio-intro h1 {
@@ -686,7 +686,121 @@
 }
 
 
-/* Tablet */
+/* --------------------------------
+   Blog
+--------------------------------- */
+
+.blog-intro {
+  margin-bottom: 2.25rem;
+}
+
+.blog-intro h1 {
+  margin-bottom: 1rem;
+}
+
+.blog-intro__lead {
+  max-width: 720px;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--md-default-fg-color--light);
+}
+
+
+.blog-section__heading {
+  margin-bottom: 1.5rem;
+}
+
+.blog-section__heading h2 {
+  margin-bottom: 0.4rem;
+}
+
+.blog-section__heading p {
+  margin: 0;
+  color: var(--md-default-fg-color--light);
+}
+
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 12px;
+  background: var(--md-default-bg-color);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.blog-card__topic {
+  margin: 0 0 0.6rem;
+  color: var(--md-accent-fg-color);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.blog-card h3 {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.blog-card h3 a {
+  color: var(--md-default-fg-color);
+}
+
+.blog-card h3 a:hover {
+  color: var(--md-accent-fg-color);
+}
+
+.blog-card > p:not(.blog-card__topic) {
+  line-height: 1.7;
+}
+
+.blog-card__link {
+  margin-top: auto;
+  padding-top: 1rem;
+  font-weight: 600;
+}
+
+/* --------------------------------
+   My journey page
+--------------------------------- */
+
+.writing-journey__photo + h2 {
+  margin-top: 1rem;
+}
+
+.writing-journey__photo {
+  margin: 2rem auto;
+  text-align: center;
+}
+
+.writing-journey__photo img {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 12px;
+}
+
+.writing-journey__closing {
+  margin-top: 1rem;
+}
+
+/* --------------------------------
+   Tablet
+--------------------------------- */
+
 @media screen and (max-width: 950px) {
   .expertise-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -695,9 +809,16 @@
   .featured-grid {
     grid-template-columns: 1fr;
   }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
-/* Mobile */
+/* --------------------------------
+   Mobile
+--------------------------------- */
+
 @media screen and (max-width: 600px) {
   .home-hero {
     padding: 2rem 1.5rem;
