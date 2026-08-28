@@ -56,9 +56,9 @@ extra_css:
 
 # Site navigation
 nav: 
-  - About me: index.md
-  - My writing journey: my-writing-journey.md
-  - Technical writing portfolio: my-portfolio.md
+  - Home: index.md
+  - Portfolio: my-portfolio.md
   - Blog: blog.md
+  - My writing journey: my-writing-journey.md
   - Archived:
     - Riley's blog: blog-archived/riley-blog.md

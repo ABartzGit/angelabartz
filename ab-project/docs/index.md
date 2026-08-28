@@ -121,8 +121,8 @@ hide:
   <div class="home-section__heading">
     <h2>Featured Work</h2>
     <p>
-      A selection of documentation and developer experience projects
-      from throughout my career.
+      Selected documentation and developer experience projects
+      from across my career.
     </p>
   </div>
 
@@ -157,7 +157,7 @@ hide:
       <p>
         Documented open-source and enterprise machine learning software,
         helping developers install, deploy, and use products across
-        multiple environments.
+        multiple cloud environments.
       </p>
 
       <p class="featured-card__focus">
@@ -176,9 +176,9 @@ hide:
       <h3>Documentation & Knowledge Base</h3>
 
       <p>
-        Developed and maintained documentation infrastructure for
-        machine learning products, organizing complex technical
-        information into a more usable documentation experience.
+        Built and maintained documentation infrastructure for machine
+        learning products, organizing complex technical information
+        into a more usable documentation experience.
       </p>
 
       <p class="featured-card__focus">
@@ -197,9 +197,9 @@ hide:
       <h3>Developer Portal</h3>
 
       <p>
-        Helped develop developer-facing content and experiences that
-        brought APIs, integration guidance, and technical resources
-        together for developers and partners.
+        Helped develop developer-facing content and experiences that brought
+        APIs, integration guidance, and technical resources together
+        in one place for developers and partners.
       </p>
 
       <p class="featured-card__focus">
@@ -220,8 +220,8 @@ hide:
   <div class="home-section__heading">
     <h2>Latest Writing</h2>
     <p>
-      Articles about documentation, developer experience, tooling,
-      and the systems behind good technical content.
+      Articles about documentation, developer experience, tooling, 
+      and the systems behind technical content.
     </p>
   </div>
 
@@ -243,7 +243,7 @@ hide:
     </article>
 
     <article class="writing-card">
-      <p class="writing-card__topic">Docs as Code</p>
+      <p class="writing-card__topic">Docs-as-Code</p>
 
       <h3>Create a Website with MkDocs and GitHub Pages</h3>
 
@@ -276,7 +276,7 @@ hide:
 
   <div class="writing-more">
     <a href="blog/" class="writing-more__link">
-      View all writing →
+      View all articles →
     </a>
   </div>
 
@@ -294,19 +294,17 @@ hide:
 
       <p>
         I grew up in metro Detroit, moved to the Bay Area in 2008,
-        and have called the Seattle area home since 2017.
+        and I've called the Seattle area home since 2017.
       </p>
 
       <p>
-        When I'm not working on documentation, I'm usually reading,
-        baking, gardening, playing D&amp;D or video games, or learning Greek.
-        I also have a habit of turning hobbies into small technical projects,
-        including websites for my book group and D&amp;D campaign.
+        I have a habit of turning hobbies into small technical projects,
+        including sites for my book group and D&amp;D campaign.
       </p>
 
       <p>
-        I like learning new tools, organizing information, and figuring out
-        how to make complicated things a little easier to use.
+        I'm naturally curious and usually have a project underway, whether 
+        I'm learning a new tool, experimenting with a website, or figuring out how something works..
       </p>
 
       <a href="my-writing-journey/" class="about-home__link">
@@ -320,9 +318,16 @@ hide:
       <div class="interest-pill">📚 Reading</div>
       <div class="interest-pill">🍰 Baking</div>
       <div class="interest-pill">🌱 Gardening</div>
-      <div class="interest-pill">🎲 D&amp;D</div>
-      <div class="interest-pill">🎮 Gaming</div>
-      <div class="interest-pill">🇬🇷 Learning Greek</div>
+      <div class="interest-pill">🎲 Board games</div>
+      <div class="interest-pill">🎮 Video games</div>
+      <div class="interest-pill">
+        <img
+          src="images/greek-flag.svg"
+          alt="Greek flag icon"
+          class="interest-pill__icon"
+        >
+        Learning Greek
+      </div>
 
     </div>
 
@@ -340,8 +345,7 @@ hide:
       <h2>Want to talk documentation, developer experience, or tooling?</h2>
 
       <p>
-        You can find me on GitHub, LinkedIn, and Discord, or reach out
-        directly by email.
+        Find me online or reach out directly by email.
       </p>
     </div>
 
@@ -417,7 +421,7 @@ hide:
     <div class="connect-home__resume">
       <a href="pdfs/Resume-Angela-Bartz-2026.pdf"
          class="home-button home-button--primary">
-        View my resume
+        View resume
       </a>
     </div>
 
