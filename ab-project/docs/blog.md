@@ -32,7 +32,7 @@ title: Blog
 
       <h3>
         <a href="build-free-chatbot-in-flare-help-system/">
-          Build a free search chatbot for a MadCap Flare help system
+          Build a Free Search Chatbot for a MadCap Flare Help System
         </a>
       </h3>
 
@@ -53,7 +53,7 @@ title: Blog
 
       <h3>
         <a href="mkdocs-site/">
-          Create a website with MkDocs and GitHub Pages
+          Create a Website with MkDocs and GitHub Pages
         </a>
       </h3>
 
@@ -74,7 +74,7 @@ title: Blog
 
       <h3>
         <a href="tw-manager-value/">
-          The value of a technical writing manager
+          The Value of a Technical Writing Manager
         </a>
       </h3>
 
