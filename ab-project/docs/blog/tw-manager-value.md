@@ -1,6 +1,6 @@
 ![Cross sections](../images/tw-manager-blog-banner.png)
 
-# The value of a technical writing manager
+# The Value of a Technical Writing Manager
 
 <div class="blog-article__meta">
   <span>June 8, 2026</span>

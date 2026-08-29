@@ -1,6 +1,6 @@
 ![MkDocs](../images/mkdocs-blog-banner.png)
 
-# Create a website with MkDocs and GitHub Pages
+# Create a Website with MkDocs and GitHub Pages
 
 <div class="blog-article__meta">
   <span>July 2, 2026</span>

@@ -190,27 +190,6 @@ hide:
       </a>
     </article>
 
-
-    <article class="featured-card">
-      <p class="featured-card__company">Avalara</p>
-
-      <h3>Developer Portal</h3>
-
-      <p>
-        Helped develop developer-facing content and experiences that brought
-        APIs, integration guidance, and technical resources together
-        in one place for developers and partners.
-      </p>
-
-      <p class="featured-card__focus">
-        Developer experience · APIs · Content strategy
-      </p>
-
-      <a href="my-portfolio/" class="featured-card__link">
-        View work →
-      </a>
-    </article>
-
   </div>
 
 </section>
@@ -315,9 +294,10 @@ hide:
 
     <div class="about-home__interests">
 
+      <div class="interest-pill">🌱 Gardening</div>
       <div class="interest-pill">📚 Reading</div>
       <div class="interest-pill">🍰 Baking</div>
-      <div class="interest-pill">🌱 Gardening</div>
+      <div class="interest-pill">🥾 Hiking</div>
       <div class="interest-pill">🎲 Board games</div>
       <div class="interest-pill">🎮 Video games</div>
       <div class="interest-pill">

@@ -1,6 +1,6 @@
 ![Chatbot in Flare](../images/chatbot-blog-banner.png)
 
-# Build a free search chatbot for a MadCap Flare help system
+# Build a Free Search Chatbot for a MadCap Flare Help System
 
 <div class="blog-article__meta">
   <span>August 12, 2026</span>

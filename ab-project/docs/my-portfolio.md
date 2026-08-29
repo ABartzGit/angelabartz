@@ -15,6 +15,8 @@
 
 </section>
 
+---
+
 <section class="portfolio-project">
 
   <p class="portfolio-project__company">Avalara</p>
