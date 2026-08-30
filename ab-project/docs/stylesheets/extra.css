@@ -870,7 +870,9 @@
   }
 
   .home-hero__photo img {
-    max-width: 150px;
+    display: block;
+    width: 220px;
+    height: auto;
   }
 
   .home-section {

@@ -29,7 +29,15 @@ hide:
   </div>
 
   <div class="home-hero__photo">
-    <img src="images/angela.png" alt="Angela Bartz">
+    <img
+      src="images/angela-440.png"
+      srcset="
+        images/angela-300.png 300w,
+        images/angela-440.png 440w
+      "
+      sizes="(max-width: 600px) 150px, 220px"
+      alt="Angela Bartz"
+    >
   </div>
 
 </section>
