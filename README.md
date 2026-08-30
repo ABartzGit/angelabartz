@@ -1,17 +1,24 @@
 # Angela Bartz
 
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+  <div style="flex: 1.75; min-width: 300px;">
+
 I'm a technical writer with more than 10 years of experience creating
 developer documentation and technical content for complex software products.
 
-My work has included APIs, SDKs, integration guides, tutorials, quick starts,
-installation and deployment guides, user and administrator documentation,
-and documentation systems. I've documented technologies ranging from
-networking and enterprise software to machine learning, cloud platforms,
-and developer tools.
+My work has included APIs, SDKs, integration guides, tutorials, quick starts, installation and deployment guides, user and administrator documentation, and documentation systems. I've documented technologies ranging from networking and enterprise software to machine learning, cloud platforms, and developer tools.
 
-I enjoy working directly with engineers and product teams to understand how
-technology actually works, test it myself, and turn that knowledge into
-documentation that helps users succeed.
+I enjoy working directly with engineers and product teams to understand how technology actually works, test it myself, and turn that knowledge into documentation that helps users succeed.
+
+  </div>
+
+  <div style="flex: .25; min-width: 200px; text-align: center;">
+
+   <img src="ab-project/docs/images/angela-440.png" alt="Your Name" style="width: 100%; max-width: 300px; border-radius: 50%;" />
+
+  </div>
+</div>
 
 ## Portfolio
 
