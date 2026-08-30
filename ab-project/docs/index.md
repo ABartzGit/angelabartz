@@ -29,7 +29,7 @@ hide:
   </div>
 
   <div class="home-hero__photo">
-    <img src="images/angela.jpg" alt="Angela Bartz">
+    <img src="images/angela.png" alt="Angela Bartz">
   </div>
 
 </section>
