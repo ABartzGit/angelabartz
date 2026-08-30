@@ -15,7 +15,7 @@ I enjoy working directly with engineers and product teams to understand how tech
 
   <div style="flex: .25; min-width: 200px; text-align: center;">
 
-   <img src="ab-project/docs/images/angela-440.png" alt="Your Name" style="width: 100%; max-width: 300px; border-radius: 50%;" />
+   <img src="ab-project/docs/images/angela-300.png" alt="Your Name" style="width: 100%; max-width: 300px; border-radius: 50%;" />
 
   </div>
 </div>
