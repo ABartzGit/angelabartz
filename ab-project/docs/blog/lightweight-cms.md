@@ -66,13 +66,10 @@ That made Google Sheets a natural place to start. Instead of treating the spread
 
 Once I decided to use Google Sheets as the source of truth, I needed a way to get that information from the spreadsheet to the website.
 
-The system ended up having four main pieces:
-
-**Google Sheets → Google Apps Script → JavaScript → MkDocs/GitHub Pages**
+The system ended up having four main pieces, and each piece has a fairly small job.
 
 ![Lightweight CMS architecture](../images/cms-blog-architecture.png)
 
-Each piece has a fairly small job.
 
 ### Google Sheets: The content store
 
@@ -200,127 +197,34 @@ That gives me a simple flow:
 
 The static site doesn't need a traditional backend or its own database. From the site's perspective, it simply requests some data and displays the result.
 
-```json
-/**
- * Public GET endpoint used by the book-club website.
- *
- * Routes:
- * - ?action=unsubscribe&token=... → unsubscribe confirmation flow
- * - ?callback=...                → JSONP book data
- * - no callback                  → JSON book data
- *
- * @param {Object} e Apps Script request event.
- * @returns {TextOutput|HtmlOutput}
- */
+```javascript
 function doGet(e) {
-  try {
-    const action =
-      e &&
-      e.parameter &&
-      e.parameter.action
-        ? cleanCellValue_(e.parameter.action)
-        : "";
+  const data = getPublicBooksData_();
+  const json = JSON.stringify(data);
 
-    /*
-     * Unsubscribe route.
-     */
-    if (action === "unsubscribe") {
-      return handleUnsubscribe_(e);
-    }
+  const callback =
+    e && e.parameter && e.parameter.callback
+      ? cleanCellValue_(e.parameter.callback)
+      : "";
 
-    /*
-     * Otherwise serve public book data.
-     */
-    const data = getPublicBooksData_();
-    const json = JSON.stringify(data);
-
-    const callback =
-      e &&
-      e.parameter &&
-      e.parameter.callback
-        ? cleanCellValue_(e.parameter.callback)
-        : "";
-
-    if (callback) {
-      if (
-        !/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(callback)
-      ) {
-        throw new Error(
-          "Invalid callback name."
-        );
-      }
-
-      return ContentService
-        .createTextOutput(
-          `${callback}(${json});`
-        )
-        .setMimeType(
-          ContentService.MimeType.JAVASCRIPT
-        );
-    }
-
+  if (callback) {
     return ContentService
-      .createTextOutput(json)
+      .createTextOutput(`${callback}(${json});`)
       .setMimeType(
-        ContentService.MimeType.JSON
+        ContentService.MimeType.JAVASCRIPT
       );
+  }
 
-  } catch (error) {
-    /*
-    * Log the real error privately.
-    */
-    console.error(error);
-
-    /*
-    * If the error came from an unsubscribe request,
-    * return a simple browser-friendly page.
-    */
-    const action =
-      e &&
-      e.parameter &&
-      e.parameter.action
-        ? cleanCellValue_(e.parameter.action)
-        : "";
-
-    if (action === "unsubscribe") {
-      return HtmlService.createHtmlOutput(`
-        <div style="
-          max-width:600px;
-          margin:60px auto;
-          font-family:Arial,Helvetica,sans-serif;
-          line-height:1.6;
-          color:#333;
-        ">
-          <h2 style="color:#7b2d5f;">
-            Unable to unsubscribe
-          </h2>
-
-          <p>
-            Something went wrong while processing your request.
-          </p>
-        </div>
-      `);
-    }
-
-    /*
-    * Otherwise return a generic public error.
-    */
-    const response = {
-      error: true,
-      message: "Unable to load book information."
-    };
-
-    return ContentService
-      .createTextOutput(
-        JSON.stringify(response)
-      )
-      .setMimeType(
-        ContentService.MimeType.JSON
-      );
-    }
+  return ContentService
+    .createTextOutput(json)
+    .setMimeType(
+      ContentService.MimeType.JSON
+    );
 }
-
 ```
+
+!!! custom "Note"
+    The actual endpoint also handles validation, errors, and unsubscribe requests, but the important part here is that it retrieves the public book data and returns it in a format the website can consume.
 
 ### Displaying the content with JavaScript
 
