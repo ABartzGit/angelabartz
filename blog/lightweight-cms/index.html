@@ -1,0 +1,959 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Angela Bartz">
+      
+      
+        <link rel="canonical" href="https://abartzgit.github.io/angelabartz/blog/lightweight-cms/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>I Built a Lightweight CMS with Google Sheets and GitHub Pages - Angela Bartz</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#i-built-a-lightweight-cms-with-google-sheets-and-github-pages" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Angela Bartz" class="md-header__button md-logo" aria-label="Angela Bartz" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Angela Bartz
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              I Built a Lightweight CMS with Google Sheets and GitHub Pages
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Angela Bartz" class="md-nav__button md-logo" aria-label="Angela Bartz" data-md-component="logo">
+      
+  <img src="../../images/logo.png" alt="logo">
+
+    </a>
+    Angela Bartz
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../my-portfolio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Portfolio
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../my-writing-journey/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    My writing journey
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Archived
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Archived
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../blog-archived/riley-blog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Riley's blog
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-actually-needed-from-a-cms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What I actually needed from a CMS
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The architecture
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#building-it-incrementally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Building it incrementally
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-few-implementation-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A Few Implementation Details
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-i-learned" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What I learned
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when-i-would-and-wouldnt-use-this-approach" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        When I would — and wouldn't — use this approach
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="i-built-a-lightweight-cms-with-google-sheets-and-github-pages">I Built a Lightweight CMS with Google Sheets and GitHub Pages</h1>
+<div class="blog-article__meta">
+  <span>September 1, 2026</span>
+  <span>Docs as code</span>
+  <span>MkDocs</span>
+  <span>GitHub Pages</span>
+</div>
+
+<p>I help organize a women’s book group that meets once a month. We have a small website where members can see what we're reading, when and where we're meeting, and what's coming up next. The site is built with MkDocs and hosted on GitHub Pages. That works well for a small site, but there was one problem: updating it meant updating the site itself.</p>
+<p>Every month, I needed to change the book, meeting date, location, synopsis, and other details in the site's Markdown files, then commit and publish those changes. None of that was particularly difficult, but it was repetitive. And as I started thinking about other things I wanted the site to do, like displaying book covers and sending email reminders, it became clear that the content shouldn't live directly in the website.</p>
+<p>I needed a way to manage the book group's information separately from the site that displayed it. </p>
+<p>In other words, I needed a content management system.</p>
+<p>But I didn't need WordPress, a database server, or an admin dashboard. This was a small site with a very small content model. I really just needed:</p>
+<ul>
+<li>A simple place to manage books and meeting information</li>
+<li>Structured data that the website could retrieve</li>
+<li>A way to update the site without editing its Markdown</li>
+<li>Something that could eventually support email subscriptions and reminders</li>
+<li>A system simple enough that I wouldn't spend more time maintaining it than using it</li>
+</ul>
+<p>I was already using Google Sheets and GitHub Pages, so I decided to see how far I could get with those.</p>
+<p>The result was a lightweight CMS built from Google Sheets, Google Apps Script, MkDocs, and a little JavaScript.</p>
+<p><img alt="Book group website" src="../../images/cms-blog-website.png" /></p>
+<h3 id="about-this-post">About this post</h3>
+<p>Before you continue reading, keep in mind that this post is an overview of what I set out to accomplish, how the pieces fit together, and why I chose this approach. It isn't intended to be a step-by-step tutorial.</p>
+<p>You can view the public repository for the static site on GitHub: <a href="https://github.com/sjvkirkland/womens-book-group">sjvkirkland/womens-book-group</a>.</p>
+<p>If you're building something similar and have questions about the implementation or the scripts I used, feel free to reach out to me at <a href="mailto:abartzmail@gmail.com">abartzmail@gmail.com</a>.</p>
+<h2 id="what-i-actually-needed-from-a-cms">What I actually needed from a CMS</h2>
+<p>Before choosing any tools, I thought about what I actually needed to manage.</p>
+<p>The content itself was pretty simple. For each meeting, I needed information like the book title, author, meeting date and location, a synopsis, and a cover image. I also wanted to keep information about upcoming books so members could see what we would be reading several months in advance.</p>
+<p>But the website wouldn't be the only consumer of that information. For example, I wanted the same meeting date, book title, and book image that appeared on the website to also appear in reminder emails. But, I didn't want to maintain one version of that information on the website and then another in an email script.</p>
+<p>That gave me a few basic requirements:</p>
+<ul>
+<li><strong>One source of truth.</strong> Book and meeting information should be stored in one place and reused wherever I needed it.</li>
+<li><strong>Easy editing.</strong> Updating a meeting shouldn't require changing code or editing a Markdown file.</li>
+<li><strong>Structured data.</strong> The website needed to be able to retrieve individual fields such as the title, author, synopsis, date, location, and cover image.</li>
+<li><strong>Automation.</strong> I wanted to be able to use the same data for things like email announcements and reminders.</li>
+<li><strong>Low maintenance.</strong> This was a book group website, not a software product. I didn't want to maintain servers, databases, or another application just to keep the site running.</li>
+</ul>
+<p>There was another requirement that became increasingly important as I worked on the project: <strong>the editing experience should be simpler than the publishing system behind it.</strong></p>
+<p>I might be comfortable editing Markdown, working with Git, and deploying a site from the command line, but none of that should be necessary just to change next month's book.</p>
+<p>A spreadsheet already provides a surprisingly good interface for this kind of structured content. Each meeting can be a row, each piece of information can have its own column, and updating the content is as simple as editing a cell.</p>
+<p>That made Google Sheets a natural place to start. Instead of treating the spreadsheet as something I would periodically copy information from, though, I decided to make it the source of truth for the site itself.</p>
+<h2 id="the-architecture">The architecture</h2>
+<p>Once I decided to use Google Sheets as the source of truth, I needed a way to get that information from the spreadsheet to the website.</p>
+<p>The system ended up having four main pieces:</p>
+<p><strong>Google Sheets → Google Apps Script → JavaScript → MkDocs/GitHub Pages</strong></p>
+<p><img alt="Lightweight CMS architecture" src="../../images/cms-blog-architecture.png" /></p>
+<p>Each piece has a fairly small job.</p>
+<h3 id="google-sheets-the-content-store">Google Sheets: The content store</h3>
+<p>The spreadsheet acts as both the data store and the editing interface.</p>
+<p>I organized the information into separate tabs for different types of data:</p>
+<ul>
+<li><strong>Meetings</strong> contains the book titles, authors, synopses, meeting dates and times, meeting locations, and cover images.</li>
+<li><strong>Subscribers</strong> contains the book group's email subscribers.</li>
+<li><strong>Settings</strong> contains configuration values used by the automation.</li>
+<li><strong>Log</strong> records actions performed by the scripts.</li>
+</ul>
+<p>For the website itself, the Meetings tab is the important part. Each row represents a meeting, and each column represents a specific piece of information about that meeting. </p>
+<p>Instead of storing a paragraph of formatted content, the spreadsheet stores individual values such as the book title, author, meeting date, location, and synopsis. Keeping those values separate makes it possible to use the same information in different ways.</p>
+<p><img alt="Meetings tab" src="../../images/cms-blog-meeting-info.png" /></p>
+<h3 id="google-apps-script-the-application-layer">Google Apps Script: The application layer</h3>
+<p>Google Sheets gave me a place to store and manage the content, but the website still needed a way to retrieve it. That's where Google Apps Script comes in.</p>
+<p>Apps Script reads the spreadsheet and converts the meeting information into structured data that the website can request. It also handles other parts of the system, including subscriber management and automated emails.</p>
+<p>This means the spreadsheet doesn't need to know anything about the website, and the website doesn't need direct access to the spreadsheet. Apps Script sits between them.</p>
+<h3 id="javascript-connecting-the-data-to-the-page">JavaScript: Connecting the data to the page</h3>
+<p>On the website, a small amount of JavaScript requests the meeting data from Apps Script. Once the data is returned, JavaScript builds the parts of the page that change from month to month: the current book, meeting information, synopsis, cover image, and upcoming books. The surrounding page, including the navigation, headings, layout, styles, and other static content, still comes from MkDocs.</p>
+<h3 id="mkdocs-and-github-pages-the-presentation-layer">MkDocs and GitHub Pages: The presentation layer</h3>
+<p>MkDocs remains responsible for building the site, and GitHub Pages hosts the generated static files.</p>
+<p>The important difference is that I no longer need to rebuild the site every time the book group chooses a new book or meeting details change. I just update the spreadsheet, and the website retrieves the updated information.</p>
+<p>That separation is what made the project start to feel like a CMS rather than simply a static website connected to a spreadsheet. Google Sheets manages the content, Apps Script makes that content available, JavaScript renders the dynamic sections, and MkDocs and the site's stylesheet provide the surrounding structure and presentation.</p>
+<p>None of the individual pieces is particularly complicated. The useful part is how they work together.</p>
+<h2 id="building-it-incrementally">Building it incrementally</h2>
+<p>I didn't start by designing a complete CMS. The first goal was much smaller: move the book and meeting information out of the website and into Google Sheets.</p>
+<h3 id="start-with-the-meeting-data">Start with the meeting data</h3>
+<p>The first step was to move the book and meeting information into the Meetings tab and make that data available to the website through Apps Script.</p>
+<p>That solved the original problem. I could change a book title, update a synopsis, or add an upcoming meeting in the spreadsheet without editing the website itself. Once that worked, it became much easier to add features.</p>
+<h3 id="add-book-covers">Add book covers</h3>
+<p>Book covers were a good example of a feature that sounded simple but introduced an interesting design question: where should the images live?</p>
+<p>I stored the cover images in Google Drive and added a Cover Image field to the Meetings sheet. Instead of embedding an image in the spreadsheet, the field identifies the corresponding file in Drive. Apps Script retrieves that information and uses it to make the image available along with the rest of the meeting data, and the website displays it with the book information.</p>
+<p>I also wanted to account for including books without an image, for example, in case an update needed to go out quickly, and there were multiple images of the book to choose from (which happened). The site handles a missing image without breaking the layout. That was a small implementation detail, but it reinforced an important rule for the project: the content should be allowed to be incomplete without breaking the presentation.</p>
+<h3 id="add-subscribers">Add subscribers</h3>
+<p>Once the website had reliable meeting data, I started thinking about communication.</p>
+<p>Previously, managing a book group website and sending book group emails were separate tasks. But both depended on the same information.</p>
+<p>I added a Subscribers tab to my Google Sheet and a signup form to the website. Apps Script handles the form submission, validates the email address, checks for existing subscribers, and either creates a new subscriber or reactivates someone who previously unsubscribed. </p>
+<p>The spreadsheet had now gone from storing website content to managing another type of structured information.</p>
+<h3 id="reuse-the-content-for-email">Reuse the content for email</h3>
+<p>The next step was where having a single source of truth really started to pay off.</p>
+<p>Instead of creating reminder emails separately, Apps Script could build them using the same meeting information already being displayed on the website. The book title, author, meeting date, location, synopsis, and cover image didn't need to be entered again. The email automation could retrieve them directly from the Meetings tab. </p>
+<p>I added emails for different points in the book group's monthly cycle, including a welcome email for new subscribers and two monthly reminders before the next meeting. </p>
+<p><img alt="Automated email reminder" src="../../images/cms-blog-email-reminder.png" /></p>
+<p>Now, when I add a future meeting to the spreadsheet, I'm not just adding content to a website. I'm adding data that can be used throughout the system.</p>
+<h3 id="add-configuration-and-logging">Add configuration and logging</h3>
+<p>As the scripts grew, I also wanted to avoid scattering configuration values throughout the code, so I added a Settings tab for values such as the organizer name and email, meeting schedule, and email subject lines. I also added a Log tab so automated actions could leave a record of what happened.</p>
+<p>Neither feature is particularly exciting on its own, but both make the system easier to understand and maintain. And that's essentially how the CMS grew: not from a list of CMS features I thought I should build, but from small problems I actually needed to solve.</p>
+<p>Each time I added something, I tried to keep the same principle: store the information once, then let the different parts of the system use it.</p>
+<h2 id="a-few-implementation-details">A Few Implementation Details</h2>
+<p>The complete Apps Script project handles quite a few things now, but the basic connection between Google Sheets and the website is relatively small.</p>
+<p>Here are a few of the implementation details that made the system work.</p>
+<h3 id="turning-spreadsheet-rows-into-structured-data">Turning spreadsheet rows into structured data</h3>
+<p>The Meetings tab is designed for people to edit, but the website needs structured data. Apps Script provides the bridge between the two. The script reads the rows in the Meetings sheet, uses the column headings to identify each field, and converts the spreadsheet data into objects that the website can use.</p>
+<p>Conceptually, a row that looks like this in the spreadsheet:</p>
+<p><img alt="Meeting row" src="../../images/cms-blog-meeting-row.png" /></p>
+<p>becomes data that looks more like this:</p>
+<pre><code class="language-json">{
+  &quot;date&quot;: &quot;2026-12-01&quot;,
+  &quot;title&quot;: &quot;Mona's Eyes&quot;,
+  &quot;author&quot;: &quot;Thomas Schlesser&quot;,
+  &quot;synopsis&quot;: &quot;...&quot;.
+  &quot;location&quot;: &quot;SJV Office&quot;
+}
+</code></pre>
+<p>That distinction is important. The website doesn't need to know which spreadsheet column contains the author or how dates are formatted in Google Sheets. Apps Script handles that translation.</p>
+<h3 id="making-the-data-available-to-the-website">Making the data available to the website</h3>
+<p>Apps Script can be deployed as a web app, which gives the website an endpoint it can request. When the site makes a request, Apps Script reads the spreadsheet and returns the meeting information in a format JavaScript can work with.</p>
+<p>That gives me a simple flow:</p>
+<p><strong>Google Sheets → Apps Script → JSON → JavaScript</strong></p>
+<p>The static site doesn't need a traditional backend or its own database. From the site's perspective, it simply requests some data and displays the result.</p>
+<pre><code class="language-json">/**
+ * Public GET endpoint used by the book-club website.
+ *
+ * Routes:
+ * - ?action=unsubscribe&amp;token=... → unsubscribe confirmation flow
+ * - ?callback=...                → JSONP book data
+ * - no callback                  → JSON book data
+ *
+ * @param {Object} e Apps Script request event.
+ * @returns {TextOutput|HtmlOutput}
+ */
+function doGet(e) {
+  try {
+    const action =
+      e &amp;&amp;
+      e.parameter &amp;&amp;
+      e.parameter.action
+        ? cleanCellValue_(e.parameter.action)
+        : &quot;&quot;;
+
+    /*
+     * Unsubscribe route.
+     */
+    if (action === &quot;unsubscribe&quot;) {
+      return handleUnsubscribe_(e);
+    }
+
+    /*
+     * Otherwise serve public book data.
+     */
+    const data = getPublicBooksData_();
+    const json = JSON.stringify(data);
+
+    const callback =
+      e &amp;&amp;
+      e.parameter &amp;&amp;
+      e.parameter.callback
+        ? cleanCellValue_(e.parameter.callback)
+        : &quot;&quot;;
+
+    if (callback) {
+      if (
+        !/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(callback)
+      ) {
+        throw new Error(
+          &quot;Invalid callback name.&quot;
+        );
+      }
+
+      return ContentService
+        .createTextOutput(
+          `${callback}(${json});`
+        )
+        .setMimeType(
+          ContentService.MimeType.JAVASCRIPT
+        );
+    }
+
+    return ContentService
+      .createTextOutput(json)
+      .setMimeType(
+        ContentService.MimeType.JSON
+      );
+
+  } catch (error) {
+    /*
+    * Log the real error privately.
+    */
+    console.error(error);
+
+    /*
+    * If the error came from an unsubscribe request,
+    * return a simple browser-friendly page.
+    */
+    const action =
+      e &amp;&amp;
+      e.parameter &amp;&amp;
+      e.parameter.action
+        ? cleanCellValue_(e.parameter.action)
+        : &quot;&quot;;
+
+    if (action === &quot;unsubscribe&quot;) {
+      return HtmlService.createHtmlOutput(`
+        &lt;div style=&quot;
+          max-width:600px;
+          margin:60px auto;
+          font-family:Arial,Helvetica,sans-serif;
+          line-height:1.6;
+          color:#333;
+        &quot;&gt;
+          &lt;h2 style=&quot;color:#7b2d5f;&quot;&gt;
+            Unable to unsubscribe
+          &lt;/h2&gt;
+
+          &lt;p&gt;
+            Something went wrong while processing your request.
+          &lt;/p&gt;
+        &lt;/div&gt;
+      `);
+    }
+
+    /*
+    * Otherwise return a generic public error.
+    */
+    const response = {
+      error: true,
+      message: &quot;Unable to load book information.&quot;
+    };
+
+    return ContentService
+      .createTextOutput(
+        JSON.stringify(response)
+      )
+      .setMimeType(
+        ContentService.MimeType.JSON
+      );
+    }
+}
+
+</code></pre>
+<h3 id="displaying-the-content-with-javascript">Displaying the content with JavaScript</h3>
+<p>On the MkDocs site, the Markdown provides containers for the parts of the page that need dynamic content.</p>
+<p>For example, the next-book section contains only a placeholder:</p>
+<pre><code class="language-html">&lt;div id=&quot;next-book-dynamic&quot;&gt;
+  &lt;p&gt;Loading next book...&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>JavaScript then retrieves the book data and renders the appropriate content into that container.</p>
+<p>The response is divided into the next book, additional upcoming books, and previously read books:</p>
+<pre><code class="language-javascript">window.renderBookClubBooks = function (data) {
+  if (!data || data.error) {
+    showBooksError();
+    return;
+  }
+
+  renderNextBook(data.next);
+  renderUpcomingBooks(data.upcoming || []);
+  renderPreviousBooks(data.previous || []);
+};
+</code></pre>
+<p>Each rendering function is responsible for a different part of the page. For example, <code>renderNextBook()</code> finds the corresponding container and replaces the placeholder content with the HTML for the next scheduled book:</p>
+<pre><code class="language-javascript">function renderNextBook(book) {
+  const container =
+    document.getElementById(&quot;next-book-dynamic&quot;);
+
+  if (!container) {
+    return;
+  }
+
+  if (!book) {
+    container.innerHTML =
+      &quot;&lt;p&gt;No upcoming book has been selected yet.&lt;/p&gt;&quot;;
+    return;
+  }
+
+  container.innerHTML =
+    buildDetailedBookHtml(book);
+}
+</code></pre>
+<p>The buildDetailedBookHtml() function then creates the full book entry, including the date, title, author, synopsis, and cover image when one is available. The generated HTML uses CSS classes defined in the site's stylesheet, so the presentation remains separate from the JavaScript that builds the content.</p>
+<p>This keeps the Markdown relatively simple. MkDocs provides the page structure and the placeholders for dynamic sections, while JavaScript determines what book content belongs in those sections and builds the HTML needed to display it.</p>
+<p>The script also does some additional work behind the scenes. It formats dates, creates Google Drive URLs for book covers, converts links in synopses into clickable links, escapes content before inserting it into HTML, and displays fallback messages when data isn't available.</p>
+<p>It also caches book data in the browser's <code>localStorage</code>. If cached data from the same day is available, the site can display it immediately while requesting a fresh copy from Apps Script in the background.</p>
+<p>So rather than updating individual fields on an otherwise static page, the JavaScript is effectively responsible for rendering the dynamic book sections of the site.</p>
+<h3 id="cache-data-that-doesnt-need-to-be-retrieved-constantly">Cache data that doesn't need to be retrieved constantly</h3>
+<p>Once the site was working, I also added caching.</p>
+<p>Book group information doesn't change every few seconds. In fact, it might not change for weeks. There was no reason to repeatedly read and process the spreadsheet every time the website needed the same information.</p>
+<p>Apps Script can cache the processed data for a period of time and return the cached version when possible.</p>
+<p>The important part was making sure that cache didn't get in the way when I <em>did</em> make a change. I added logic to clear it when meeting information is edited, so updated content can become available without waiting for the cache to expire.</p>
+<p>It's a small optimization, but it also makes the behavior of the system more intentional: cache when the data is stable; invalidate the cache when the source changes.</p>
+<h3 id="keep-configuration-out-of-the-code">Keep configuration out of the code</h3>
+<p>As the project grew, I also moved configurable values into the Settings tab. Things like the organizer name, meeting time, and email subject lines don't really belong in JavaScript constants buried inside a script. Putting them in the spreadsheet means I can change those values without modifying the code. It also reinforces the role Google Sheets plays in the system. It isn't simply a makeshift database. It's the administrative interface for the book group.</p>
+<p>And that's one of the things I like most about this approach: the technical complexity stays behind a very ordinary interface. To manage the content, I don't need to think about APIs, JSON, JavaScript, or GitHub. I open a spreadsheet and edit a row or a cell.</p>
+<h2 id="what-i-learned">What I learned</h2>
+<p>The most interesting thing I learned from this project is that a CMS doesn't necessarily need to look like a CMS.</p>
+<p>When I started, I thought of Google Sheets primarily as a convenient place to store the book group's information. As the project grew, though, I realized that the spreadsheet was serving many of the same purposes as a traditional content management system. It gave me a place to create and update content. It provided structure for that content. And, most importantly, it separated the content from the places where that content was ultimately published.</p>
+<p>A few other lessons emerged along the way.</p>
+<h3 id="separate-content-from-presentation">Separate content from presentation</h3>
+<p>This was probably the biggest improvement over the original site.</p>
+<p>When book information lived directly in Markdown, the content and its presentation were closely connected. Updating the content meant updating the website. Once the meeting information moved into Google Sheets, those became two separate concerns.</p>
+<p>Google Sheets answers questions like: What book are we reading? Who wrote it? When are we meeting? The website answers a different question: How should that information be presented to someone visiting the site?</p>
+<p>That separation made the content much easier to reuse. The same book title can appear in a website card, an upcoming-books list, or an email without maintaining three copies of it.</p>
+<h3 id="design-the-editing-experience-for-the-person-maintaining-the-content">Design the editing experience for the person maintaining the content</h3>
+<p>It's easy to focus on the experience of the person visiting a website and forget about the person maintaining it.</p>
+<p>For this project, those happen to both be me. But I still don't want to edit source files, commit changes, and redeploy a site every time the book group chooses its next book.</p>
+<p>The best editing interface wasn't something I needed to build. It was a spreadsheet. That's an idea I can apply to much larger content systems as well: the technology behind a publishing system can be complicated, but the experience of contributing content doesn't have to be.</p>
+<h3 id="a-single-source-of-truth-becomes-more-valuable-as-the-system-grows">A single source of truth becomes more valuable as the system grows</h3>
+<p>Moving the meeting information into Google Sheets initially saved me a small amount of work. Its value became much more obvious as I added other features.</p>
+<p>What started as a way to avoid updating Markdown became the source for the website, upcoming books, and automated emails. Each new use made the original decision to separate the content from the presentation more valuable.</p>
+<p>It also reduced opportunities for mistakes. If the meeting location changes, I change it once.</p>
+<p>That wasn't a major concern when the spreadsheet had only one consumer. It became much more important as the system grew.</p>
+<h3 id="build-for-the-problem-you-actually-have">Build for the problem you actually have</h3>
+<p>I could have installed a traditional CMS. I could have created a database and an administrative application. Either approach would have given me far more capabilities.</p>
+<p>But I didn't need them.</p>
+<p>I needed to manage a relatively small amount of structured content for a book group.</p>
+<p>Google Sheets and Apps Script have limitations, and I wouldn't choose this architecture for every project. But for this one, those limitations are a reasonable tradeoff for having a system that's inexpensive, understandable, and easy to maintain.</p>
+<p>That may be my biggest takeaway from the project: a good content system isn't necessarily the one with the most features. It's the one that makes managing the content you actually have easier.</p>
+<h2 id="when-i-would-and-wouldnt-use-this-approach">When I would — and wouldn't — use this approach</h2>
+<p>I like how this system turned out, but I wouldn't recommend building every CMS with Google Sheets and Apps Script.</p>
+<p>It works well for this project because the content is relatively small and structured, the number of people managing it is limited, and the publishing requirements are straightforward.</p>
+<p>I would consider a similar approach for things like a small community website, internal project site, event calendar, club website, or other project where:</p>
+<ul>
+<li>The content fits naturally into rows and columns.</li>
+<li>Only a small number of trusted people need to edit it.</li>
+<li>The site doesn't need complex editorial workflows or permissions.</li>
+<li>Keeping infrastructure and maintenance to a minimum is important.</li>
+<li>The same structured information could be useful in more than one place.</li>
+</ul>
+<p>There are also plenty of situations where I would choose something else.</p>
+<p>If I needed hundreds of editors, complex permissions, versioning and approval workflows, relationships between many different content types, or a rich visual editing experience, I would want a CMS designed to provide those capabilities.</p>
+<p>Google Sheets also isn't a database, and Apps Script isn't intended to be the backend for a large, high-traffic application. At some point, trying to extend this architecture would create more complexity than it eliminates.</p>
+<p>But that's also part of what made this project interesting. I didn't set out to build a CMS. I set out to make a small, easy-to-maintain website.</p>
+<p>Moving the content into Google Sheets solved that problem. Apps Script made the content reusable. Then that same foundation made it possible to add book covers, subscriptions, automated emails, caching, configuration, and other features without changing the basic architecture.</p>
+<p>The result is still a static website hosted on GitHub Pages. But maintaining it no longer feels like maintaining a static website. Most of the time, I just open a spreadsheet and update the book group. And that's exactly what I wanted.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Angela Bartz
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://discord.com/users/1125538089457160232" target="_blank" rel="noopener" title="discord.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M492.5 69.8c-.2-.3-.4-.6-.8-.7-38.1-17.5-78.4-30-119.7-37.1-.4-.1-.8 0-1.1.1s-.6.4-.8.8c-5.5 9.9-10.5 20.2-14.9 30.6-44.6-6.8-89.9-6.8-134.4 0-4.5-10.5-9.5-20.7-15.1-30.6-.2-.3-.5-.6-.8-.8s-.7-.2-1.1-.2C162.5 39 122.2 51.5 84.1 69c-.3.1-.6.4-.8.7C7.1 183.5-13.8 294.6-3.6 404.2c0 .3.1.5.2.8s.3.4.5.6c44.4 32.9 94 58 146.8 74.2.4.1.8.1 1.1 0s.7-.4.9-.7c11.3-15.4 21.4-31.8 30-48.8.1-.2.2-.5.2-.8s0-.5-.1-.8-.2-.5-.4-.6-.4-.3-.7-.4c-15.8-6.1-31.2-13.4-45.9-21.9-.3-.2-.5-.4-.7-.6s-.3-.6-.3-.9 0-.6.2-.9.3-.5.6-.7c3.1-2.3 6.2-4.7 9.1-7.1.3-.2.6-.4.9-.4s.7 0 1 .1c96.2 43.9 200.4 43.9 295.5 0 .3-.1.7-.2 1-.2s.7.2.9.4c2.9 2.4 6 4.9 9.1 7.2.2.2.4.4.6.7s.2.6.2.9-.1.6-.3.9-.4.5-.6.6c-14.7 8.6-30 15.9-45.9 21.8-.2.1-.5.2-.7.4s-.3.4-.4.7-.1.5-.1.8.1.5.2.8c8.8 17 18.8 33.3 30 48.8.2.3.6.6.9.7s.8.1 1.1 0c52.9-16.2 102.6-41.3 147.1-74.2.2-.2.4-.4.5-.6s.2-.5.2-.8c12.3-126.8-20.5-236.9-86.9-334.5zm-302 267.7c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.4 59.2-52.8 59.2m195.4 0c-29 0-52.8-26.6-52.8-59.2s23.4-59.2 52.8-59.2c29.7 0 53.3 26.8 52.8 59.2 0 32.7-23.2 59.2-52.8 59.2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ABartzGit/angelabartz" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/angela-bartz/" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.footer"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
