@@ -23,7 +23,7 @@
     
     
       
-        <title>I Built a Lightweight CMS with Google Sheets and GitHub Pages - Angela Bartz</title>
+        <title>Lightweight cms - Angela Bartz</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              I Built a Lightweight CMS with Google Sheets and GitHub Pages
+              Lightweight cms
             
           </span>
         </div>
@@ -524,6 +524,7 @@
 
 
 
+<p><img alt="CMS blog banner" src="../../images/cms-blog-banner.png" /></p>
 <h1 id="i-built-a-lightweight-cms-with-google-sheets-and-github-pages">I Built a Lightweight CMS with Google Sheets and GitHub Pages</h1>
 <div class="blog-article__meta">
   <span>September 1, 2026</span>
@@ -569,10 +570,8 @@
 <p>That made Google Sheets a natural place to start. Instead of treating the spreadsheet as something I would periodically copy information from, though, I decided to make it the source of truth for the site itself.</p>
 <h2 id="the-architecture">The architecture</h2>
 <p>Once I decided to use Google Sheets as the source of truth, I needed a way to get that information from the spreadsheet to the website.</p>
-<p>The system ended up having four main pieces:</p>
-<p><strong>Google Sheets → Google Apps Script → JavaScript → MkDocs/GitHub Pages</strong></p>
+<p>The system ended up having four main pieces, and each piece has a fairly small job.</p>
 <p><img alt="Lightweight CMS architecture" src="../../images/cms-blog-architecture.png" /></p>
-<p>Each piece has a fairly small job.</p>
 <h3 id="google-sheets-the-content-store">Google Sheets: The content store</h3>
 <p>The spreadsheet acts as both the data store and the editing interface.</p>
 <p>I organized the information into separate tabs for different types of data:</p>
@@ -642,126 +641,34 @@
 <p>That gives me a simple flow:</p>
 <p><strong>Google Sheets → Apps Script → JSON → JavaScript</strong></p>
 <p>The static site doesn't need a traditional backend or its own database. From the site's perspective, it simply requests some data and displays the result.</p>
-<pre><code class="language-json">/**
- * Public GET endpoint used by the book-club website.
- *
- * Routes:
- * - ?action=unsubscribe&amp;token=... → unsubscribe confirmation flow
- * - ?callback=...                → JSONP book data
- * - no callback                  → JSON book data
- *
- * @param {Object} e Apps Script request event.
- * @returns {TextOutput|HtmlOutput}
- */
-function doGet(e) {
-  try {
-    const action =
-      e &amp;&amp;
-      e.parameter &amp;&amp;
-      e.parameter.action
-        ? cleanCellValue_(e.parameter.action)
-        : &quot;&quot;;
+<pre><code class="language-javascript">function doGet(e) {
+  const data = getPublicBooksData_();
+  const json = JSON.stringify(data);
 
-    /*
-     * Unsubscribe route.
-     */
-    if (action === &quot;unsubscribe&quot;) {
-      return handleUnsubscribe_(e);
-    }
+  const callback =
+    e &amp;&amp; e.parameter &amp;&amp; e.parameter.callback
+      ? cleanCellValue_(e.parameter.callback)
+      : &quot;&quot;;
 
-    /*
-     * Otherwise serve public book data.
-     */
-    const data = getPublicBooksData_();
-    const json = JSON.stringify(data);
-
-    const callback =
-      e &amp;&amp;
-      e.parameter &amp;&amp;
-      e.parameter.callback
-        ? cleanCellValue_(e.parameter.callback)
-        : &quot;&quot;;
-
-    if (callback) {
-      if (
-        !/^[A-Za-z_$][A-Za-z0-9_$]*$/.test(callback)
-      ) {
-        throw new Error(
-          &quot;Invalid callback name.&quot;
-        );
-      }
-
-      return ContentService
-        .createTextOutput(
-          `${callback}(${json});`
-        )
-        .setMimeType(
-          ContentService.MimeType.JAVASCRIPT
-        );
-    }
-
+  if (callback) {
     return ContentService
-      .createTextOutput(json)
+      .createTextOutput(`${callback}(${json});`)
       .setMimeType(
-        ContentService.MimeType.JSON
+        ContentService.MimeType.JAVASCRIPT
       );
+  }
 
-  } catch (error) {
-    /*
-    * Log the real error privately.
-    */
-    console.error(error);
-
-    /*
-    * If the error came from an unsubscribe request,
-    * return a simple browser-friendly page.
-    */
-    const action =
-      e &amp;&amp;
-      e.parameter &amp;&amp;
-      e.parameter.action
-        ? cleanCellValue_(e.parameter.action)
-        : &quot;&quot;;
-
-    if (action === &quot;unsubscribe&quot;) {
-      return HtmlService.createHtmlOutput(`
-        &lt;div style=&quot;
-          max-width:600px;
-          margin:60px auto;
-          font-family:Arial,Helvetica,sans-serif;
-          line-height:1.6;
-          color:#333;
-        &quot;&gt;
-          &lt;h2 style=&quot;color:#7b2d5f;&quot;&gt;
-            Unable to unsubscribe
-          &lt;/h2&gt;
-
-          &lt;p&gt;
-            Something went wrong while processing your request.
-          &lt;/p&gt;
-        &lt;/div&gt;
-      `);
-    }
-
-    /*
-    * Otherwise return a generic public error.
-    */
-    const response = {
-      error: true,
-      message: &quot;Unable to load book information.&quot;
-    };
-
-    return ContentService
-      .createTextOutput(
-        JSON.stringify(response)
-      )
-      .setMimeType(
-        ContentService.MimeType.JSON
-      );
-    }
+  return ContentService
+    .createTextOutput(json)
+    .setMimeType(
+      ContentService.MimeType.JSON
+    );
 }
-
 </code></pre>
+<div class="admonition custom">
+<p class="admonition-title">Note</p>
+<p>The actual endpoint also handles validation, errors, and unsubscribe requests, but the important part here is that it retrieves the public book data and returns it in a format the website can consume.</p>
+</div>
 <h3 id="displaying-the-content-with-javascript">Displaying the content with JavaScript</h3>
 <p>On the MkDocs site, the Markdown provides containers for the parts of the page that need dynamic content.</p>
 <p>For example, the next-book section contains only a placeholder:</p>
