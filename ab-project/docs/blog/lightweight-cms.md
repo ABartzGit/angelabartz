@@ -1,3 +1,5 @@
+![CMS blog banner](../images/cms-blog-banner.png)
+
 # I Built a Lightweight CMS with Google Sheets and GitHub Pages
 
 <div class="blog-article__meta">
