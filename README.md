@@ -80,6 +80,7 @@ I've built.
 
 | Article | Topic |
 | --- | --- |
+| [I Built a Lightweight CMS with Google Sheets and GitHub Pages](https://abartzgit.github.io/angelabartz/blog/lightweight-cms/) | My book group needed a website that was easy to update |
 | [Build a Free Search Chatbot for a MadCap Flare Help System](https://abartzgit.github.io/angelabartz/blog/build-free-chatbot-in-flare-help-system/) | Building a lightweight search chatbot for an existing help system |
 | [Create a Website with MkDocs and GitHub Pages](https://abartzgit.github.io/angelabartz/blog/mkdocs-site/) | Building and publishing a documentation-style website with MkDocs |
 | [The Value of a Technical Writing Manager](https://abartzgit.github.io/angelabartz/blog/tw-manager-value/) | How technical writing managers connect documentation, engineering, product, and organizational goals |
