@@ -28,7 +28,7 @@ title: Blog
   <div class="blog-grid">
 
     <article class="blog-card">
-      <p class="blog-card__topic">Documentation tooling</p>
+      <p class="blog-card__topic">CMS</p>
 
       <h3>
         <a href="lightweight-cms/">

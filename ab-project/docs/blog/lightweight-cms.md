@@ -9,9 +9,9 @@
   <span>GitHub Pages</span>
 </div>
 
-I help organize a women’s book group that meets once a month. We have a small website where members can see what we're reading, when and where we're meeting, and what's coming up next. The site is built with MkDocs and hosted on GitHub Pages. That works well for a small site, but there was one problem: updating it meant updating the site itself.
+I help organize a women’s book group that meets once a month. I built a small website where members can see what we're reading, when and where we're meeting, and what's coming up next. The site is built with MkDocs and hosted on GitHub Pages. That works well for a small site, but there was one problem: updating it meant updating the site itself.
 
-Every month, I needed to change the book, meeting date, location, synopsis, and other details in the site's Markdown files, then commit and publish those changes. None of that was particularly difficult, but it was repetitive. And as I started thinking about other things I wanted the site to do, like displaying book covers and sending email reminders, it became clear that the content shouldn't live directly in the website.
+Every month, I needed to change the book, meeting date, synopsis, and other details in the site's Markdown files, then commit and publish those changes. None of that was particularly difficult, but it was repetitive. And as I started thinking about other things I wanted the site to do, like displaying book covers and sending email reminders, it became clear that the content shouldn't live directly in the website.
 
 I needed a way to manage the book group's information separately from the site that displayed it. 
 
