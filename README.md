@@ -22,11 +22,11 @@ my work with developer documentation and documentation systems.
 The samples below provide a broader collection of my technical writing work
 throughout my career.
 
-## Writing Samples
+## Writing samples
 
-### APIs, SDKs, and Developer Documentation
+### APIs, SDKs, and developer documentation
 
-| Writing Sample | Type | What It Demonstrates |
+| Writing sample | Type | What it demonstrates |
 | --- | --- | --- |
 | [Skytree REST API](ab-project/docs/pdfs/SkytreeRESTAPI.pdf) | API reference | REST API documentation covering authentication, projects, datasets, transformations, models, results, and troubleshooting |
 | [Skytree Python SDK](ab-project/docs/pdfs/SkytreePythonSDK.pdf) | SDK reference | Python SDK installation, usage, and module-level reference |
@@ -34,9 +34,9 @@ throughout my career.
 | [ClearPass Policy Manager Configuration API](ab-project/docs/pdfs/Aruba_CPPM_API_Guide.pdf) | API reference | XML/HTTP API documentation covering requests, responses, filtering, and read, write, and delete operations |
 | [Skytree PMML Scorer](ab-project/docs/pdfs/SkytreePMMLScorer.pdf) | Integration guide | Batch model scoring and integration of predictive models into Java applications |
 
-### Machine Learning
+### Machine learning
 
-| Writing Sample | Type | What It Demonstrates |
+| Writing sample | Type | What it demonstrates |
 | --- | --- | --- |
 | [Deep Learning with H2O](ab-project/docs/pdfs/H2ODeepLearningBooklet.pdf) | Technical booklet / editor | Edited a developer-focused deep learning guide covering H2O architecture, R and Python examples, model training, optimization, and practical ML use cases |
 | [Skytree Server User Guide](ab-project/docs/pdfs/SkytreeServerUserGuide.pdf) | User guide | Comprehensive documentation for an enterprise machine-learning platform, including data preparation, modeling, prediction, recommendation, scoring, and distributed processing |
@@ -44,9 +44,9 @@ throughout my career.
 | [Skytree GUI](ab-project/docs/pdfs/SkytreeGUI.pdf) | User guide | GUI-based workflows for projects, datasets, transformations, models, results, and plots |
 | [Skytree Admin Guide](ab-project/docs/pdfs/SkytreeAdminGuide.pdf) | Administrator guide | Administrative workflows using REST API, Python SDK, and graphical interfaces |
 
-### Installation and Deployment
+### Installation and deployment
 
-| Writing Sample | Type | What It Demonstrates |
+| Writing sample | Type | What it demonstrates |
 | --- | --- | --- |
 | [Skytree Installation Guide](ab-project/docs/pdfs/SkytreeInstallation.pdf) | Installation guide | Installation and configuration of a machine-learning platform in multi-node and Hadoop environments |
 | [Skytree Server Installation Guide](ab-project/docs/pdfs/SkytreeServerInstallation.pdf) | Installation guide | System requirements, installation, verification, upgrading, and uninstalling |
@@ -55,18 +55,18 @@ throughout my career.
 | [AirWave Installation Guide](ab-project/docs/pdfs/AirWaveInstallation.pdf) | Installation guide | Enterprise software deployment in VMware, Hyper-V, Red Hat, and other server environments |
 | [Installing Acuity](ab-project/docs/pdfs/InstallingAcuity.pdf) | Installation guide | Enterprise installation involving Windows servers, SQL Server, databases, clients, and related system requirements |
 
-### Networking and Systems
+### Networking and systems
 
-| Writing Sample | Type | What It Demonstrates |
+| Writing sample | Type | What it demonstrates |
 | --- | --- | --- |
 | [Operating GateD](ab-project/docs/pdfs/OperatingGateD.pdf) | Networking guide | Detailed documentation for operating and configuring networking and routing software |
 | [SCT 2.1 User Guide](ab-project/docs/pdfs/SCT%202.1%20User%20Guide.pdf) | User guide | Low-level firmware and platform documentation covering configuration, POST, USB, security, and system utilities |
 | [SCT VariableTest User Guide](ab-project/docs/pdfs/SCT_VariableTest_UG.pdf) | Utility guide | Prerequisites, command-line options, and procedures for a firmware testing utility |
 | [Multi-Language Support Porting Guide](ab-project/docs/pdfs/MultiLanguage_Porting_Guide.pdf) | Porting guide | Technical guidance for porting and implementing multilingual support |
 
-### Enterprise Product Documentation
+### Enterprise product documentation
 
-| Writing Sample | Type | What It Demonstrates |
+| Writing sample | Type | What it demonstrates |
 | --- | --- | --- |
 | [AirWave 7.7 User Guide](ab-project/docs/pdfs/AirWave7-7UserGuide.pdf) | User guide | Large-scale enterprise product documentation covering configuration, device management, administration, reporting, and visualization |
 | [ClearPass Policy Manager User Manual](ab-project/docs/pdfs/ClearPassPolicyManager.pdf) | User guide | Comprehensive documentation for an enterprise network access and security product |
@@ -85,7 +85,15 @@ I've built.
 | [Create a Website with MkDocs and GitHub Pages](https://abartzgit.github.io/angelabartz/blog/mkdocs-site/) | Building and publishing a documentation-style website with MkDocs |
 | [The Value of a Technical Writing Manager](https://abartzgit.github.io/angelabartz/blog/tw-manager-value/) | How technical writing managers connect documentation, engineering, product, and organizational goals |
 
-## About This Repository
+## A little more about me
+
+I grew up in metro Detroit, moved to the Bay Area in 2008, and have called the Seattle area home since 2017.
+
+I have a habit of turning hobbies into small technical projects, including sites for my [book group](https://sjvkirkland.github.io/womens-book-group/) and [D&D campaign](https://abartzgit.github.io/ravenlost/).
+
+I'm naturally curious and usually have a project underway, whether I'm learning a new tool, experimenting with a website, or figuring out how something works.
+
+## About this repository
 
 This repository contains the source for my technical writing portfolio,
 which is built with Material for MkDocs and hosted with GitHub Pages.

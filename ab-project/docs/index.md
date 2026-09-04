@@ -296,7 +296,7 @@ hide:
 
       <p>
         I grew up in metro Detroit, moved to the Bay Area in 2008,
-        and I've called the Seattle area home since 2017.
+        and have called the Seattle area home since 2017.
       </p>
 
       <p>
@@ -306,7 +306,7 @@ hide:
 
       <p>
         I'm naturally curious and usually have a project underway, whether 
-        I'm learning a new tool, experimenting with a website, or figuring out how something works..
+        I'm learning a new tool, experimenting with a website, or figuring out how something works.
       </p>
 
       <a href="my-writing-journey/" class="about-home__link">
