@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Red twenty-sided die</title>
+  <desc id="desc">A red d20 showing 20 in the center with surrounding numbered faces.</desc>
+
+  <!-- Outer silhouette -->
+  <polygon points="256,20 455,137 455,375 256,492 57,375 57,137"
+           fill="#8f0710" stroke="#4a0006" stroke-width="12" stroke-linejoin="round"/>
+
+  <!-- Facets -->
+  <polygon points="256,33 256,144 86,132" fill="#f21f27"/>
+  <polygon points="256,33 426,132 256,144" fill="#d9141d"/>
+
+  <polygon points="86,132 256,144 176,316" fill="#ca0d18"/>
+  <polygon points="256,144 426,132 336,316" fill="#b90b15"/>
+
+  <polygon points="256,144 336,316 176,316" fill="#f12029"/>
+
+  <polygon points="57,152 86,132 176,316 96,350" fill="#e21620"/>
+  <polygon points="426,132 455,152 416,350 336,316" fill="#c30c16"/>
+
+  <polygon points="96,350 176,316 242,471" fill="#e61a24"/>
+  <polygon points="176,316 336,316 256,471" fill="#bd0a14"/>
+  <polygon points="336,316 416,350 270,471" fill="#d91620"/>
+
+  <!-- Facet lines -->
+  <g fill="none" stroke="#4a0006" stroke-width="10" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M256 33 L256 144"/>
+    <path d="M86 132 L256 144 L426 132"/>
+    <path d="M57 152 L96 350 L176 316 L256 144 L336 316 L416 350 L455 152"/>
+    <path d="M176 316 L336 316"/>
+    <path d="M96 350 L242 471"/>
+    <path d="M336 316 L270 471"/>
+  </g>
+
+  <!-- Numbers -->
+  <g fill="#ffffff"
+     font-family="Arial, Helvetica, sans-serif"
+     font-weight="700"
+     text-anchor="middle"
+     dominant-baseline="middle">
+    <text x="256" y="240" font-size="72">20</text>
+
+    <text x="204" y="92" font-size="40" transform="rotate(-12 204 92)">18</text>
+    <text x="324" y="92" font-size="40" transform="rotate(12 324 92)">4</text>
+
+    <text x="138" y="218" font-size="48" transform="rotate(-28 138 218)">2</text>
+    <text x="374" y="218" font-size="48" transform="rotate(28 374 218)">14</text>
+
+    <text x="84" y="258" font-size="36" transform="rotate(-76 84 258)">12</text>
+    <text x="429" y="258" font-size="36" transform="rotate(76 429 258)">6</text>
+
+    <text x="156" y="392" font-size="40" transform="rotate(26 156 392)">10</text>
+    <text x="358" y="392" font-size="40" transform="rotate(-26 358 392)">16</text>
+
+    <text x="256" y="382" font-size="52">8</text>
+  </g>
+</svg>

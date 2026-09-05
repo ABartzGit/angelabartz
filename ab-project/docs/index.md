@@ -310,6 +310,14 @@ hide:
       <div class="interest-pill">🎮 Video games</div>
       <div class="interest-pill">
         <img
+          src="images/d20.svg"
+          alt=""
+          class="interest-pill__icon"
+        >
+        Tabletop RPGs
+      </div>
+      <div class="interest-pill">
+        <img
           src="images/greek-flag.svg"
           alt="Greek flag icon"
           class="interest-pill__icon"
