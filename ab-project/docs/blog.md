@@ -112,4 +112,6 @@ title: Blog
 
   </div>
 
+  <br>
+
 </section>
