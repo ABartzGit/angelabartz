@@ -13,6 +13,14 @@ I enjoy working directly with engineers and product teams to understand how
 technology actually works, test it myself, and turn that knowledge into
 documentation that helps users succeed.
 
+In my free time, I have a habit of turning hobbies into small technical projects, 
+including a lightweight CMS for my [book group](https://sjvkirkland.github.io/womens-book-group/) 
+and a website for my [D&D campaign](https://abartzgit.github.io/ravenlost/).
+
+I'm naturally curious and usually have a project underway, whether I'm 
+learning a new tool, experimenting with a website, or figuring out how 
+something works.
+
 ## Portfolio
 
 My [technical writing portfolio](https://abartzgit.github.io/angelabartz/)
@@ -84,14 +92,6 @@ I've built.
 | [Build a Free Search Chatbot for a MadCap Flare Help System](https://abartzgit.github.io/angelabartz/blog/build-free-chatbot-in-flare-help-system/) | Building a lightweight search chatbot for an existing help system |
 | [Create a Website with MkDocs and GitHub Pages](https://abartzgit.github.io/angelabartz/blog/mkdocs-site/) | Building and publishing a documentation-style website with MkDocs |
 | [The Value of a Technical Writing Manager](https://abartzgit.github.io/angelabartz/blog/tw-manager-value/) | How technical writing managers connect documentation, engineering, product, and organizational goals |
-
-## A little more about me
-
-I grew up in metro Detroit, moved to the Bay Area in 2008, and have called the Seattle area home since 2017.
-
-I have a habit of turning hobbies into small technical projects, including sites for my [book group](https://sjvkirkland.github.io/womens-book-group/) and [D&D campaign](https://abartzgit.github.io/ravenlost/).
-
-I'm naturally curious and usually have a project underway, whether I'm learning a new tool, experimenting with a website, or figuring out how something works.
 
 ## About this repository
 
