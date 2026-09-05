@@ -14,7 +14,7 @@ hide:
 
     <p class="home-hero__intro">
       I create documentation and developer experiences that help people
-      understand complex software and to productive quickly.
+      understand complex software and be productive quickly.
     </p>
 
     <div class="home-hero__actions">
