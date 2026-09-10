@@ -1,21 +1,18 @@
 # Angela Bartz
 
-I'm a technical writer with more than 10 years of experience creating
-developer documentation and technical content for complex software products.
+I'm a developer documentation professional with extensive experience creating 
+and testing APIs, SDKs, code samples, tutorials, and developer documentation. 
+I enjoy getting hands-on with technology and increasingly use AI-assisted 
+development to build my own tools, prototypes, and websites. 
 
-My work has included APIs, SDKs, integration guides, tutorials, quick starts,
-installation and deployment guides, user and administrator documentation,
-and documentation systems. I've documented technologies ranging from
-networking and enterprise software to machine learning, cloud platforms,
-and developer tools.
-
-I enjoy working directly with engineers and product teams to understand how
+I enjoy collaborating with engineers and product teams to understand how
 technology actually works, test it myself, and turn that knowledge into
 documentation that helps users succeed.
 
 In my free time, I have a habit of turning hobbies into small technical projects, 
 including a lightweight CMS for my [book group](https://sjvkirkland.github.io/womens-book-group/) 
-and a website for my [D&D campaign](https://abartzgit.github.io/ravenlost/).
+and a website for my [D&D campaign](https://abartzgit.github.io/ravenlost/) that 
+allows for shared edits.
 
 I'm naturally curious and usually have a project underway, whether I'm 
 learning a new tool, experimenting with a website, or figuring out how 
