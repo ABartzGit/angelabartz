@@ -9,10 +9,11 @@ I enjoy collaborating with engineers and product teams to understand how
 technology actually works, test it myself, and turn that knowledge into
 documentation that helps users succeed.
 
-In my free time, I have a habit of turning hobbies into small technical projects, 
-including a lightweight CMS for my [book group](https://sjvkirkland.github.io/womens-book-group/) 
-and a website for my [D&D campaign](https://abartzgit.github.io/ravenlost/) that 
-allows for shared edits.
+In my free time, I have a habit of turning hobbies into small technical 
+projects, including a lightweight CMS for my 
+[book group](https://sjvkirkland.github.io/womens-book-group/) 
+and an automated publishing workflow for my [D&D campaign](https://abartzgit.github.io/ravenlost/) 
+that turns our collaborative Google Docs into a GitHub Pages site.
 
 I'm naturally curious and usually have a project underway, whether I'm 
 learning a new tool, experimenting with a website, or figuring out how 
