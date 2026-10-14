@@ -215,6 +215,22 @@ hide:
   <div class="writing-grid">
 
     <article class="writing-card">
+      <p class="writing-card__topic">Automated Documentation Flow</p>
+
+      <h3>From Google Docs to GitHub Pages: Automating My D&D Campaign Notes</h3>
+
+      <p>
+        What started as a way to organize our D&D campaign became a lightweight 
+        publishing system that lets players collaborate in Google Docs while I 
+        automate the conversion to Markdown and GitHub publishing.
+      </p>
+
+      <a href="blog/automating-dnd-campaign-notes/" class="writing-card__link">
+        Read article →
+      </a>
+    </article>
+
+    <article class="writing-card">
       <p class="writing-card__topic">CMS</p>
 
       <h3>I Built a Lightweight CMS wtih Google Sheets and GitHub Pages</h3>
@@ -240,21 +256,6 @@ hide:
       </p>
 
       <a href="blog/build-free-chatbot-in-flare-help-system/" class="writing-card__link">
-        Read article →
-      </a>
-    </article>
-
-    <article class="writing-card">
-      <p class="writing-card__topic">Docs-as-Code</p>
-
-      <h3>Create a Website with MkDocs and GitHub Pages</h3>
-
-      <p>
-        How to build and publish a documentation-style site using MkDocs,
-        Material for MkDocs, Git, and GitHub Pages.
-      </p>
-
-      <a href="blog/mkdocs-site/" class="writing-card__link">
         Read article →
       </a>
     </article>
