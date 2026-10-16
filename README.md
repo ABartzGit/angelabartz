@@ -86,7 +86,7 @@ I've built.
 
 | Article | Topic |
 | --- | --- |
-| [From Google Docs to GitHub Pages: Automating My D&D Campaign Notes](https://abartzgit.github.io/angelabartz/blog/automating-dnd-campaign-notes/) | I built an automated publishing workflow for my D&D campaign that lets players collaborate in Google Docs and publish their changes to GitHub as Markdown files |
+| [From Google Docs to GitHub Pages: Automating My D&D Campaign Notes](https://abartzgit.github.io/angelabartz/blog/automating-dnd-campaign-notes/) | An automated publishing workflow that allows Google Docs collaborators to publish their changes to GitHub |
 | [I Built a Lightweight CMS with Google Sheets and GitHub Pages](https://abartzgit.github.io/angelabartz/blog/lightweight-cms/) | My book group needed a website that was easy to update |
 | [Build a Free Search Chatbot for a MadCap Flare Help System](https://abartzgit.github.io/angelabartz/blog/build-free-chatbot-in-flare-help-system/) | Building a lightweight search chatbot for an existing help system |
 | [Create a Website with MkDocs and GitHub Pages](https://abartzgit.github.io/angelabartz/blog/mkdocs-site/) | Building and publishing a documentation-style website with MkDocs |
