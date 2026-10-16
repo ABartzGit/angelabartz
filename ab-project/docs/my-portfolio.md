@@ -206,8 +206,8 @@
 
   <p>
     These samples represent a small selection of my work.
-    I'm happy to discuss additional projects or documentation
-    experience relevant to a particular role.
+    You can view more samples in my 
+    <a href="https://github.com/ABartzGit/angelabartz#portfolio" target="_blank">GitHub repository</a>.
   </p>
 
   <a href="mailto:abartzmail@gmail.com" class="portfolio-closing__link">
