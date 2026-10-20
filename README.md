@@ -44,6 +44,9 @@ throughout my career.
 
 | Writing sample | Type | What it demonstrates |
 | --- | --- | --- |
+| [H2O-3 User Guide](https://h2o-release.s3.amazonaws.com/h2o/rel-zahradnik/6/docs-website/h2o-docs/index.html) | HTML documentation | Comprehensive machine-learning documentation covering installation, Python and R interfaces, algorithms, model training, REST APIs, and deployment |
+| [H2O Driverless AI User Guide](http://artifacts.h2o.ai.s3.amazonaws.com/releases/ai/h2o/dai/rel-1.8.7-29/docs/userguide/index.html) | HTML documentation | Documentation for an automated machine-learning platform, covering experiments, model development, and product workflows |
+| [H2O Puddle User Guide](https://docs.h2o.ai/puddle/userguide/_build/html/index.html) | HTML documentation | Sphinx-based documentation for a cloud platform supporting Driverless AI and H2O-3, including system provisioning and management |
 | [Deep Learning with H2O](ab-project/docs/pdfs/H2ODeepLearningBooklet.pdf) | Technical booklet / editor | Edited a developer-focused deep learning guide covering H2O architecture, R and Python examples, model training, optimization, and practical ML use cases |
 | [Skytree Server User Guide](ab-project/docs/pdfs/SkytreeServerUserGuide.pdf) | User guide | Comprehensive documentation for an enterprise machine-learning platform, including data preparation, modeling, prediction, recommendation, scoring, and distributed processing |
 | [Skytree GUI Quick Start](ab-project/docs/pdfs/SkytreeGUIQuickStart.pdf) | Quick start | Hands-on machine-learning workflow from creating a project and preparing data through training, testing, and evaluating a model |
