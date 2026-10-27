@@ -82,6 +82,12 @@ throughout my career.
 | [Skytree Platform Release Notes](ab-project/docs/pdfs/SkytreePlatformReleaseNotes.pdf) | Release notes | Platform release information, changes, and product updates |
 | [Skytree Server Release Notes](ab-project/docs/pdfs/SkytreeServerReleaseNotes.pdf) | Release notes | Server release information, changes, and product updates |
 
+## Product data sheets
+
+| Writing sample | Type | What it demonstrates |
+| --- | --- | --- |
+| [SecureCore Tiano Data Sheet](ab-project/docs/pdfs/SCT_Data_Sheet.pdf) | Product data sheet | Technical product messaging for UEFI BIOS firmware, combining architecture explanations, feature highlights, and customer-focused benefits |
+
 ## Articles
 
 I also write about technical writing, documentation systems, and projects
