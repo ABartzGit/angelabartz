@@ -90,6 +90,12 @@
     </li>
 
     <li>
+      <a href="https://h2o-release.s3.amazonaws.com/h2o/rel-zahradnik/6/docs-website/h2o-docs/rest-api-reference.html" target="_blank">
+        H2O-3 REST API
+      </a>
+    </li>
+
+    <li>
       <a href="https://docs.h2o.ai/puddle/userguide/_build/html/index.html" target="_blank">
         Enterprise Puddle User Guide
       </a>
