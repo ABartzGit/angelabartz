@@ -110,7 +110,7 @@ I've built.
 ## Certifications
 
 | Title | Organization | Credential ID |
-| --- | --- |
+| --- | --- | --- |
 | Scrum Fundamentals Certified | Scrum Study MK | 1207770 |
 | Certified Scrum Master | Scrum Alliance | [2225064](https://app.badgecert.com/public/badges/view/od9bnr45) | 
 
