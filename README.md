@@ -1,4 +1,4 @@
-# Angela Bartz
+# Angela Bartz, CSM
 
 I'm a developer documentation professional with extensive experience creating 
 and testing APIs, SDKs, code samples, tutorials, and developer documentation. 
@@ -106,6 +106,14 @@ I've built.
 | Presentation | Topic |
 | --- | --- |
 | [Technical Writing as a Career -- University of Detroit Mercy (2019)](ab-project/docs/pdfs/UDMPres-2019.pdf) | My journey from an English degree to a career in technology, and how technical writing has evolved |
+
+## Certifications
+
+| Title | Organization | Credential ID |
+| --- | --- |
+| Scrum Fundamentals Certified | Scrum Study MK | 1207770 |
+| Certified Scrum Master | Scrum Alliance | [2225064](https://app.badgecert.com/public/badges/view/od9bnr45) | 
+
 
 ## About this repository
 
