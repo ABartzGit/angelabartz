@@ -13,6 +13,10 @@
     for both open-source and enterprise products.
   </p>
 
+  <p>
+    For more samples, see my <a href="https://github.com/ABartzGit/angelabartz#portfolio", target="_blank">GitHub repository</a>.
+  </p>
+
 </section>
 
 ---
